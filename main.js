@@ -37,4 +37,3 @@ bot.on('message', message => {
                         message.channel.bulkDelete(list);
                     }, function(err){message.channel.send("Erreur")})}
     })
-    })
