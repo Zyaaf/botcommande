@@ -29,6 +29,10 @@ bot.on('message', message => {
         message.channel.sendMessage("La commandes a bien été livré accès envoyer en pv");
         console.log("Commande Validé");
     }
+    
+    if (message.content === prefix + "monavatar" ) {
+        message.reply(message.author.avatarURL);
+    }
 
    if(message.content === prefix + "clear"){
             if (message.member.hasPermission("MANAGE_MESSAGES")){
