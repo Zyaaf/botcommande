@@ -7,10 +7,6 @@ bot.on('ready', () => {
     console.log("Prêt à travailler chef ");
 });
 
-bot.on('ready', () => {
-    bot.user.setActivity(" -help | StaffMe")
-    });
-
 bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
