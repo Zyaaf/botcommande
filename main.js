@@ -21,7 +21,7 @@ bot.on('message', message => {
     }
     
     if (message.content === prefix + "help"){
-        message.channel.sendMessage("Je rigole voilà les commandes : -help , -Google , -infobot , -monavatar , -clear");
+        message.channel.sendMessage("Je rigole voilà les commandes : -help , -Google , -infobot , -clear");
         console.log("Help");
     }
 
@@ -35,10 +35,6 @@ bot.on('message', message => {
         console.log("Commande Validé");
     }
     
-    if (message.content === prefix + "monavatar" ) {
-        message.reply(message.author.avatarURL);
-    }
-
    if(message.content === prefix + "clear"){
             if (message.member.hasPermission("MANAGE_MESSAGES")){
                 message.channel.fetchMessages()
