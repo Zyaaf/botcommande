@@ -17,7 +17,12 @@ bot.on('message', message => {
 
     if (message.content === prefix + "help"){
         message.channel.sendMessage("Un autre staff va mieux vous aider");
-        console.log("Commande Validé");
+        console.log("Rigolo");
+    }
+    
+    if (message.content === prefix + "help"){
+        message.channel.sendMessage("Je rigole voilà les commandes : -help , -Google , -infobot , -monavatar , -clear");
+        console.log("Help");
     }
 
     if (message.content === prefix + "Google"){
