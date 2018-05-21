@@ -39,3 +39,12 @@ bot.on("guildMemberAdd", member => {
 bot.on("guildMemberRemove", member => {
     member.guild.channels.find("name", "bienvenue").send(`${member} vien de quitter`)
 })
+
+   if(message.content === prefix + "clear"){
+            if (message.member.hasPermission("MANAGE_MESSAGES")){
+                message.channel.fetchMessages()
+                    .then(function(list){
+                        message.channel.bulkDelete(list);
+                    }, function(err){message.channel.send("Erreur")})}
+    }
+    })
