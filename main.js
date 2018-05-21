@@ -8,7 +8,7 @@ bot.on('ready', () => {
 });
 
 bot.on('ready', () => {
-    bot.user.setActivity(" *help | VSD'Bot")
+    bot.user.setActivity(" -help | StaffMe")
     });
 
 bot.login(process.env.TOKEN);
