@@ -7,6 +7,10 @@ bot.on('ready', () => {
     console.log("Prêt à travailler chef ");
 });
 
+bot.on('ready', () => {
+    bot.user.setActivity(" *help | VSD'Bot")
+    });
+
 bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
