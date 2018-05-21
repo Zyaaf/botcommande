@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 var bot = new Discord.Client();
-var prefix = ("!");
+var prefix = ("-");
 
 bot.on('ready', () => {
     console.log("Prêt à travailler chef ");
@@ -15,18 +15,18 @@ bot.on('message', message => {
         console.log('ping pong');
     }
 
-    if (message.content === prefix + "valider"){
-        message.channel.sendMessage("Votre commande à été validé avec succés");
+    if (message.content === prefix + "help"){
+        message.channel.sendMessage("Un autre staff va mieux vous aider");
         console.log("Commande Validé");
     }
 
-    if (message.content === prefix + "encours"){
-        message.channel.sendMessage("La commandes de Mike qui a été validé est en cours de livraison");
+    if (message.content === prefix + "Google"){
+        message.channel.sendMessage("C'est un navigateur le plus utilisé en France");
         console.log("Commande en cours ");
     }
 
-    if (message.content === prefix + "livrer"){
-        message.channel.sendMessage("La commandes a bien été livré accès envoyer en pv");
+    if (message.content === prefix + "infobot"){
+        message.channel.sendMessage("Il a été crée et développer par thom avec ses plus grands soins !");
         console.log("Commande Validé");
     }
     
