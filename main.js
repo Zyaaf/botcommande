@@ -30,8 +30,6 @@ bot.on('message', message => {
         console.log("Commande Validé");
     }
 
-});
-
 bot.on("guildMemberAdd", member => {
     member.guild.channels.find("name", "bienvenue").send(`Bienvenue ${member}`)
 })
@@ -48,3 +46,4 @@ bot.on("guildMemberRemove", member => {
                     }, function(err){message.channel.send("Erreur")})}
     }
     })
+});
