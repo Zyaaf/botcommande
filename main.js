@@ -24,15 +24,25 @@ bot.on('message', message => {
                 message.channel.sendEmbed(embednom)
                 }
     
-    if (message.content === prefix + "Google"){
-        message.channel.sendMessage("C'est un navigateur le plus utilisé en France");
-        console.log("Commande en cours ");
-    }
+    if(message.content === prefix + "Google"){
+    var embednom = new Discord.RichEmbed()
+                    .setTitle("**GOOGLE**")
+                    .setDescription("C'est le navigateur de mon créateur")
+                    .setColor("0x009FEF")
+                    .setFooter("StaffMe - Tous droits réservés")
+                message.channel.sendEmbed(embednom)
+                }
 
-    if (message.content === prefix + "infobot"){
-        message.channel.sendMessage("Il a été crée et développer par thom avec ses plus grands soins !");
-        console.log("Commande Validé");
-    }
+
+    if(message.content === prefix + "infobot"){
+    var embednom = new Discord.RichEmbed()
+                    .setTitle("**INFO SUR LE BOT**")
+                    .setDescription("Il a été développer par le meilleur et unique thom")
+                    .setColor("0x009FEF")
+                    .setFooter("StaffMe - Tous droits réservés")
+                message.channel.sendEmbed(embednom)
+                }
+
     
    if(message.content === prefix + "clear"){
             if (message.member.hasPermission("MANAGE_MESSAGES")){
