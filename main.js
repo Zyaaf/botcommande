@@ -18,11 +18,16 @@ bot.on('message', message => {
     if(message.content === prefix + "help"){
     var embednom = new Discord.RichEmbed()
                     .setTitle("**HELP**")
-                    .setDescription("Voilà les commandes : -help , -Google , -infobot , -clear")
+                    .setDescription("Voilà les commandes : -help , -Google , -infobot , -clear , -nouveautés , ")
                     .setColor("0x009FEF")
                     .setFooter("StaffMe - Tous droits réservés")
                 message.channel.sendEmbed(embednom)
                 }
+    
+    // Nouveautés //
+    if (message.content === prefix + "nouveautés") {
+        message.reply('Mon développeur ajoute des nouveautés presque tout les jours.')
+    }
     
     if(message.content === prefix + "Google"){
     var embednom = new Discord.RichEmbed()
