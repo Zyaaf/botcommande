@@ -14,17 +14,16 @@ bot.on('message', message => {
         message.reply("pong");
         console.log('ping pong');
     }
-
-    if (message.content === prefix + "help"){
-        message.channel.sendMessage("Un autre staff va mieux vous aider");
-        console.log("Rigolo");
-    }
     
-    if (message.content === prefix + "help"){
-        message.channel.sendMessage("Je rigole voilà les commandes : -help , -Google , -infobot , -clear");
-        console.log("Help");
-    }
-
+    if(message.content === prefix + "help"){
+    var embednom = new Discord.RichEmbed()
+                    .setTitle("**HELP**")
+                    .setDescription("Voilà les commandes : -help , -Google , -infobot , -clear")
+                    .setColor("0x009FEF")
+                    .setFooter("StaffMe - Tous droits réservés")
+                message.channel.sendEmbed(embednom)
+                }
+    
     if (message.content === prefix + "Google"){
         message.channel.sendMessage("C'est un navigateur le plus utilisé en France");
         console.log("Commande en cours ");
