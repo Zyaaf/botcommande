@@ -10,7 +10,7 @@ bot.on('ready', () => {
 bot.login(process.env.TOKEN);
 
 bot.on('ready', () => {
-bot.user.setActivity("Répondre au membre")
+bot.user.setActivity("StaffMe | -help")
 });
 
 bot.on('message', message => {
