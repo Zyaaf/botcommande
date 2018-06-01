@@ -9,6 +9,10 @@ bot.on('ready', () => {
 
 bot.login(process.env.TOKEN);
 
+bot.on('ready', () => {
+bot.user.setActivity("Répondre au membre")
+});
+
 bot.on('message', message => {
     if (message.content === "ping"){
         message.reply("pong");
