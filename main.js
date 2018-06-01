@@ -73,7 +73,7 @@ if(message.content.startsWith(prefix + ban)) {
     }
 
     if(!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) {
-        return message.channel.send("Je n'ai pas la permission pour ban);
+        return message.channel.send("Je n'ai pas la permission pour ban");
     }
     ban.ban().then(member => {
         message.channel.send(`${member.user.username} est ban pas ${message.author.username} !`)
