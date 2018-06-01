@@ -80,7 +80,6 @@ if(message.content.startsWith(prefix + ban)) {
     }
 
     }
-}
     
    if(message.content === prefix + "clear"){
             if (message.member.hasPermission("MANAGE_MESSAGES")){
