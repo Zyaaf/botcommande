@@ -22,7 +22,7 @@ bot.on('message', message => {
     if(message.content === prefix + "help"){
     var embednom = new Discord.RichEmbed()
                     .setTitle("**HELP**")
-                    .setDescription("Voilà les commandes : -help , -Google , -infobot , -clear , -nouveautés , ")
+                    .setDescription("Voilà les commandes : -help , -Google , -infobot , -clear , -nouveautés , -botcréator , ")
                     .setColor("0x009FEF")
                     .setFooter("StaffMe - Tous droits réservés")
                 message.channel.sendEmbed(embednom)
@@ -37,6 +37,15 @@ bot.on('message', message => {
     var embednom = new Discord.RichEmbed()
                     .setTitle("**GOOGLE**")
                     .setDescription("C'est le navigateur de mon créateur")
+                    .setColor("0x009FEF")
+                    .setFooter("StaffMe - Tous droits réservés")
+                message.channel.sendEmbed(embednom)
+                }
+    
+    if(message.content === prefix + "botcréator"){
+    var embednom = new Discord.RichEmbed()
+                    .setTitle("**BOTCREATOR**")
+                    .setDescription("C'es la plateform de mon créateur...")
                     .setColor("0x009FEF")
                     .setFooter("StaffMe - Tous droits réservés")
                 message.channel.sendEmbed(embednom)
