@@ -66,8 +66,6 @@ message.author.sendMessage({embed});
     ban.ban().then(member => {
         message.channel.send(`${member.user.username} est ban pas ${message.author.username} !`)
     }
-
-    }
     
       if (message.content === prefix + "monavatar") {
     message.reply(message.author.avatarURL);
