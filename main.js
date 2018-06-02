@@ -60,6 +60,24 @@ bot.on('message', message => {
                     .setFooter("StaffMe - Tous droits réservés")
                 message.channel.sendEmbed(embednom)
                 }
+    
+clientDiscord.on("message", message => {
+   if(message.content[0] === PREFIX) {
+       if(message.content === "-test") {
+           //message.reply("Check you DM's receved command");
+           message.channel.send("Check you DM's receved command");
+           message.author.createDM().then(channeL => {
+               channel.send('Check you DM's receved command');
+           });
+       }
+   }
+});
+
+clientDiscord.on('guildMemberAdd', member => {
+   member.createDM().then(channeL => {
+       return channel.send('Bienvenue sur mon serveur ' + member.displayName);
+   }).catch(console.error);
+});
 
    if(message.content === prefix + "clear"){
             if (message.member.hasPermission("MANAGE_MESSAGES")){
