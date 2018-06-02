@@ -91,4 +91,12 @@ message.channel.delete();
             message.channel.send('Vous avez réussie à vider le salon.')}
                     console.log("La commande clear viens d'être effectué par un membre de l'équipe.")
     }
+ 
+   if(message.content === prefix + "infodiscord")
+       var embed = new Discord.RichEmbed()
+       .setDescription("Informations à propos du discord")
+       .addField("Nom du discord", message.guild.name)
+       .addField("Nombre d'utilisateurs sur ce discord", message.guild.memberCount)
+       .setColor("0x0000FF")
+    message.channel.sendEmbed(embed)
 })
