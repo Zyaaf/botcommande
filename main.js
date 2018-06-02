@@ -29,6 +29,7 @@ embed.addField("-clear","Pour supprimé les message");
 embed.addField("-nouveautés","Pour savoir quel sont les nouveautés");
 embed.addField("-botcréator","Pour savoir quesque represente botcréator");
 embed.addField("-support", "Si besoin d'aide prononcer cette commande");
+embed.addField("-monavatar", "Pour voir votre avatar en url c'est ici !");
 embed.setColor(0xFF0000);
 message.author.sendMessage({embed});
     }
@@ -47,8 +48,7 @@ message.author.sendMessage({embed});
                 message.channel.sendEmbed(embednom)
                 }
     
-      if (message.content === 'what is my avatar') {
-    // Send the user's avatar URL
+      if (message.content === prefix + "monavatar") {
     message.reply(message.author.avatarURL);
   }
     
