@@ -32,15 +32,6 @@ embed.setColor(0xFF0000);
 message.author.sendMessage({embed});
     }
     
-    if(message.content === prefix + "help"){
-    var embednom = new Discord.RichEmbed()
-                    .setTitle("**HELP**")
-                    .setDescription("Voilà les commandes : -help , -Google , -infobot , -clear , -nouveautés , -botcréator , ")
-                    .setColor("0x009FEF")
-                    .setFooter("StaffMe - Tous droits réservés")
-                message.channel.sendEmbed(embednom)
-                }
-    
     // Nouveautés //
     if (message.content === prefix + "nouveautés") {
         message.reply('Mon développeur ajoute des nouveautés presque tout les jours.')
