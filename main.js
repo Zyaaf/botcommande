@@ -62,7 +62,7 @@ bot.on('message', message => {
                 }
     
 clientDiscord.on("message", message => {
-   if(message.content[0] === PREFIX) {
+   if(message.content === prefix + "test") {
        if(message.content === "-test") {
            //message.reply("Check you DM's receved command");
            message.channel.send("Check you DM's receved command");
