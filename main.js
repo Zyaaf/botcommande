@@ -19,7 +19,12 @@ bot.on('message', message => {
         console.log('ping pong');
     }
     if(message.content === "help"){
-       message.author.sendMessage("blabla");
+       var embed = new Discord.RichEmbed();
+embed.setTitle("Help page");
+embed.setDescription("Description");
+embed.addField("name","value");
+embed.setColor(0xFF0000);
+message.author.sendMessage({embed});
     }
     
     if(message.content === prefix + "help"){
