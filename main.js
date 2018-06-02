@@ -50,7 +50,12 @@ message.author.sendMessage({embed});
        message.channel.guild.createChannel("support");
        message.channel.send('Vous devez allez dans #support on vous aidera !');
     }
-       
+    
+    if(message.content === prefix + "support") {   
+       if(message.channel.name === "support"){
+message.channel.delete();
+       }
+    }
     
     if(message.content === prefix + "botcréator"){
     var embednom = new Discord.RichEmbed()
