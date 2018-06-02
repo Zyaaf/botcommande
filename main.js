@@ -51,6 +51,12 @@ message.author.sendMessage({embed});
        message.channel.send('Vous devez allez dans #support on vous aidera !');
     }
     
+    if(message.content === prefix + "delete support") {
+       if(message.channel.name === "support"){
+message.channel.delete();
+       }
+    }
+    
     if(message.content === prefix + "botcréator"){
     var embednom = new Discord.RichEmbed()
                     .setTitle("**BOTCREATOR**")
