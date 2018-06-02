@@ -15,9 +15,12 @@ bot.user.setActivity("StaffMe | -help")
 
 bot.on('message', message => {
     if (message.content === "ping"){
-message.author.createDM().then((dm) => {
-dm.sendMessage("bla bla");
-});
+        message.reply("pong");
+        console.log('ping pong');
+    }
+    if(message.content === "help"){
+       message.author.sendMessage("blabla");
+    }
     
     if(message.content === prefix + "help"){
     var embednom = new Discord.RichEmbed()
