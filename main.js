@@ -48,25 +48,6 @@ message.author.sendMessage({embed});
                 message.channel.sendEmbed(embednom)
                 }
     
-    if(message.content.startsWith(prefix + ban)) {
-    if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.channel.send("Vous n'avez pas la permission");
-
-    if(message.mentions.users.size === 0) {
-        return message.channel.send("Vous devez mentionner un utilisateur");
-    }
-
-    var ban = message.guild.member(message.mentions.usersfirst());
-    if(!ban) {
-        return message.send("Je ne sais pas si l'utilisateur existe");
-    }
-
-    if(!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) {
-        return message.channel.send("Je n'ai pas la permission pour ban");
-    }
-    ban.ban().then(member => {
-        message.channel.send(`${member.user.username} est ban pas ${message.author.username} !`)
-    }
-    
       if (message.content === prefix + "monavatar") {
     message.reply(message.author.avatarURL);
   }
