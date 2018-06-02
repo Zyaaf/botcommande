@@ -51,7 +51,7 @@ message.author.sendMessage({embed});
        message.channel.send('Vous devez allez dans #support on vous aidera !');
     }
     
-    if(message.content === prefix + "support") {   
+    if(message.content === prefix + "delete support") {   
        if(message.channel.name === "support"){
 message.channel.delete();
        }
