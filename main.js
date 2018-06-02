@@ -18,11 +18,16 @@ bot.on('message', message => {
         message.reply("pong");
         console.log('ping pong');
     }
-    if(message.content === "help"){
+    if(message.content === prefix + "help"){
        var embed = new Discord.RichEmbed();
 embed.setTitle("Help page");
-embed.setDescription("Description");
-embed.addField("name","value");
+embed.setDescription("Les commandes sont dessous :p ");
+embed.addField("-help","Pour avoir les commandes");
+embed.addField("-Google","Pour savoir c'est quoi google");
+embed.addField("-infobot","Pour avoir les informations du bot");
+embed.addField("-clear","Pour supprimé les message");
+embed.addField("-nouveautés","Pour savoir quel sont les nouveautés");
+embed.addField("-botcréator","Pour savoir quesque represente botcréator");
 embed.setColor(0xFF0000);
 message.author.sendMessage({embed});
     }
