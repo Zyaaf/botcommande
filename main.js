@@ -28,6 +28,7 @@ embed.addField("-infobot","Pour avoir les informations du bot");
 embed.addField("-clear","Pour supprimé les message");
 embed.addField("-nouveautés","Pour savoir quel sont les nouveautés");
 embed.addField("-botcréator","Pour savoir quesque represente botcréator");
+embed.addField("-support", "Si besoin d'aide prononcer cette commande");
 embed.setColor(0xFF0000);
 message.author.sendMessage({embed});
     }
