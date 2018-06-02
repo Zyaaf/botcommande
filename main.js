@@ -67,7 +67,7 @@ clientDiscord.on("message", message => {
            //message.reply("Check you DM's receved command");
            message.channel.send("Check you DM's receved command");
            message.author.createDM().then(channeL => {
-               channel.send('Check you DM's receved command');
+               channel.send("Check you DMs receved command");
            });
        }
    }
