@@ -30,6 +30,7 @@ embed.addField("-nouveautés","Pour savoir quel sont les nouveautés");
 embed.addField("-botcréator","Pour savoir quesque represente botcréator");
 embed.addField("-support", "Si besoin d'aide prononcer cette commande");
 embed.addField("-monavatar", "Pour voir votre avatar en url c'est ici !");
+embed.addField("-infodiscord", "Les infos sur le serveur sont dans cette commande !");
 embed.setColor(0xFF0000);
 message.author.sendMessage({embed});
     }
