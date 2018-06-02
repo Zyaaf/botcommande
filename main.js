@@ -47,6 +47,11 @@ message.author.sendMessage({embed});
                 message.channel.sendEmbed(embednom)
                 }
     
+      if (message.content === 'what is my avatar') {
+    // Send the user's avatar URL
+    message.reply(message.author.avatarURL);
+  }
+    
     if(message.content === prefix + "support") {
        message.channel.guild.createChannel("support");
        message.channel.send('Vous devez allez dans #support on vous aidera !');
