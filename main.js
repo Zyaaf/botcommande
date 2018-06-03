@@ -52,6 +52,21 @@ message.author.sendMessage({embed});
     message.reply(message.author.avatarURL);
   }
     
+      if(msg.content === prefix + 'role1') {
+    // on cherche le role sur le serveur
+    let role = msg.guild.role.find('name', 'role 1')
+
+    // On le supprime ou on l'ajoute
+    if(msg.member.role.find('name', 'role1')) {
+        msg.member.removeRole(role)
+        msg.reply("Voilà ! Vous n'avez plus le role1 !")
+    }
+    else {
+        msg.member.addRole(role)
+        msg.reply("Voilà ! Vous avez le role1 !")
+    }
+}
+    
     if(message.content === prefix + "support") {
        message.channel.guild.createChannel("support");
        message.channel.send('Vous devez allez dans #support on vous aidera !');
