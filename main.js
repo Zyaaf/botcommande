@@ -13,6 +13,12 @@ bot.on('ready', () => {
 bot.user.setActivity("StaffMe | -help")
 });
 
+bot.on('guildMemberAdd', member => {
+  const channel = member.guild.channels.find('index', 'discussion');
+ if (!channel) return;
+  channel.send(`Nous te souhaitons la bienvenue, ${member}`);
+})
+
 bot.on('message', message => {
     if (message.content === "ping"){
         message.reply("pong");
