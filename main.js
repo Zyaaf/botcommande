@@ -30,6 +30,7 @@ embed.addField("-nouveautés","Pour savoir quel sont les nouveautés");
 embed.addField("-botcréator","Pour savoir quesque represente botcréator");
 embed.addField("-support", "Si besoin d'aide prononcer cette commande");
 embed.addField("-monavatar", "Pour voir votre avatar en url c'est ici !");
+embed.addField("-version", "Pour voir ma dernière version :p");
 embed.setColor(0xFF0000);
 message.author.sendMessage({embed});
     }
@@ -47,6 +48,10 @@ message.author.sendMessage({embed});
                     .setFooter("StaffMe - Tous droits réservés")
                 message.channel.sendEmbed(embednom)
                 }
+    
+     if(message.content === prefix + "version"){
+         message.channel.send("Ma version est en 1.5 :gear:");
+         message.reply("Si tu veux le bot demande à Thom.Lorbrok#8058");
     
       if (message.content === prefix + "monavatar") {
     message.reply(message.author.avatarURL);
