@@ -31,15 +31,16 @@ embed.addField("-botcréator","Pour savoir quesque represente botcréator");
 embed.addField("-support", "Si besoin d'aide prononcer cette commande");
 embed.addField("-monavatar", "Pour voir votre avatar en url c'est ici !");
 embed.addField("-version", "Pour voir ma dernière version :p");
+embed.addField("-infodiscord", "Informations sur le discord ton serveurs discord !");
 embed.setColor(0xFF0000);
 message.author.sendMessage({embed});
     }
-    
+
     // Nouveautés //
     if (message.content === prefix + "nouveautés") {
         message.reply('Mon développeur ajoute des nouveautés presque tout les jours.')
     }
-    
+
     if(message.content === prefix + "Google"){
     var embednom = new Discord.RichEmbed()
                     .setTitle("**GOOGLE**")
@@ -48,35 +49,21 @@ message.author.sendMessage({embed});
                     .setFooter("StaffMe - Tous droits réservés")
                 message.channel.sendEmbed(embednom)
                 }
-    
-     if(message.content === prefix + "version"){
-         message.channel.send("Ma version est en 1.5 :gear:");
-         message.reply("Si tu veux le bot demande à Thom.Lorbrok#8058");
-    
+
       if (message.content === prefix + "monavatar") {
     message.reply(message.author.avatarURL);
       }
-    
+
     if(message.content === prefix + "support") {
        message.channel.guild.createChannel("support");
        message.channel.send('Vous devez allez dans #support on vous aidera !');
     }
-    
+
     if(message.content === prefix + "delete support") {
        if(message.channel.name === "support"){
 message.channel.delete();
        }
     }
-    
-    if(message.content === prefix + "botcréator"){
-    var embednom = new Discord.RichEmbed()
-                    .setTitle("**BOTCREATOR**")
-                    .setDescription("C'es la plateform de mon créateur...")
-                    .setColor("0x009FEF")
-                    .setFooter("StaffMe - Tous droits réservés")
-                message.channel.sendEmbed(embednom)
-                }
-
 
     if(message.content === prefix + "infobot"){
     var embednom = new Discord.RichEmbed()
@@ -86,7 +73,29 @@ message.channel.delete();
                     .setFooter("StaffMe - Tous droits réservés")
                 message.channel.sendEmbed(embednom)
                 }
+        
+    if(message.content === prefix + "botcréator"){
+    var embednom = new Discord.RichEmbed()
+                    .setTitle("**BOT CREATOR**")
+                    .setDescription("C'est la plateform de mon créateur")
+                    .setColor("0x009FEF")
+                    .setFooter("StaffMe - Tous droits réservés")
+                message.channel.sendEmbed(embednom)
+                }
     
+    if(message.content === prefix + "version"){
+        message.channel.send("Ma version est la 1.5 :gear: ");
+        
+    }
+
+    if(message.content === prefix + "infodiscord")
+         var embed = new Discord.RichEmbed()
+                .setDescription("Informations à propos du discord")
+                .addField("Nom du discord", message.guild.name)
+                .addField("Nombre d'utilisateurs sur ce discord", message.guild.memberCount)
+                .setColor("0x0000FF")
+                    message.channel.sendEmbed(embed)
+
    if(message.content === prefix + "clear"){
             if (message.member.hasPermission("MANAGE_MESSAGES")){
                 message.channel.fetchMessages()
@@ -95,4 +104,5 @@ message.channel.delete();
                     }, function(err){message.channel.send("Erreur")})
             message.channel.send('Vous avez réussie à vider le salon.')}
                     console.log("La commande clear viens d'être effectué par un membre de l'équipe.")
-   }
+    }
+})
