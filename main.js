@@ -27,19 +27,19 @@ bot.on('message', message => {
     
     if(message.content === prefix + "help"){
         var embednom = new Discord.RichEmbed()
-embed.setTitle("Help page");
-embed.setDescription("Les commandes sont dessous :p ");
-embed.addField("-help","Pour avoir les commandes");
-embed.addField("-Google","Pour savoir c'est quoi google");
-embed.addField("-infobot","Pour avoir les informations du bot");
-embed.addField("-clear","Pour supprimé les message");
-embed.addField("-nouveautés","Pour savoir quel sont les nouveautés");
-embed.addField("-botcréator","Pour savoir quesque represente botcréator");
-embed.addField("-support", "Si besoin d'aide prononcer cette commande");
-embed.addField("-monavatar", "Pour voir votre avatar en url c'est ici !");
-embed.addField("-version", "Pour voir ma dernière version :p");
-embed.addField("-infodiscord", "Informations sur le discord ton serveurs discord !");
-embed.setColor(0xFF0000);
+         .setTitle("Help page")
+         .setDescription("Les commandes sont dessous :p ")
+         .addField("-help","Pour avoir les commandes")
+         .addField("-Google","Pour savoir c'est quoi google")
+         .addField("-infobot","Pour avoir les informations du bot")
+         .addField("-clear","Pour supprimé les message")
+         .addField("-nouveautés","Pour savoir quel sont les nouveautés")
+         .addField("-botcréator","Pour savoir quesque represente botcréator")
+         .addField("-support", "Si besoin d'aide prononcer cette commande")
+         .addField("-monavatar", "Pour voir votre avatar en url c'est ici !")
+         .addField("-version", "Pour voir ma dernière version :p")
+         .addField("-infodiscord", "Informations sur le discord ton serveur discord !")
+         .setColor(0xFF0000);
                 message.channel.sendEmbed(embednom)
                 }
 
