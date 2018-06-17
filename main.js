@@ -25,7 +25,7 @@ bot.on('message', message => {
         console.log('ping pong');
     }
     
-    if(message.content === prefix + "Google"){
+    if(message.content === prefix + "help"){
         var embednom = new Discord.RichEmbed()
 embed.setTitle("Help page");
 embed.setDescription("Les commandes sont dessous :p ");
