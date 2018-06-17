@@ -24,8 +24,9 @@ bot.on('message', message => {
         message.reply("pong");
         console.log('ping pong');
     }
-    if(message.content === prefix + "help"){
-       var embed = new Discord.RichEmbed();
+    
+    if(message.content === prefix + "Google"){
+        var embednom = new Discord.RichEmbed()
 embed.setTitle("Help page");
 embed.setDescription("Les commandes sont dessous :p ");
 embed.addField("-help","Pour avoir les commandes");
@@ -39,8 +40,8 @@ embed.addField("-monavatar", "Pour voir votre avatar en url c'est ici !");
 embed.addField("-version", "Pour voir ma dernière version :p");
 embed.addField("-infodiscord", "Informations sur le discord ton serveurs discord !");
 embed.setColor(0xFF0000);
-message.author.sendMessage({embed});
-    }
+                message.channel.sendEmbed(embednom)
+                }
 
     // Nouveautés //
     if (message.content === prefix + "nouveautés") {
