@@ -69,7 +69,7 @@ bot.on('message', message => {
     
     if(message.content === prefix + "don"){
          var embednom = new Discord.RichEmbed()
-                    .setTitle(":gift_heart: Don pour Sky")
+                    .setTitle(":gift_heart: Don pour StaffMe")
                     .setDescription("Si tu souhaites me faire un don (même des petits), clique ici: https://www.paypal.me/ThomLorbrok ! En me fesant un don, tu as directement le rang: Staff Donateur, stylé non ?")
                     .setColor("0x009FEF")
                     .setFooter("StaffMe - Tous droits réservés")
