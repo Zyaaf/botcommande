@@ -50,14 +50,14 @@ bot.on('message', message => {
     }
     
     ///Commande -alerteadm
-        if (message.content === (prefix + "alerteadm")) {
+      if (message.content === (prefix + "alerteadm")) {
         if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.(":negative_squared_cross_mark: Vous n'avez pas la permission d'éxecuter cette commande. (commande éxecutée: .alerteadm)");
         if(message.content === '.alerteadm') return message.channel.sendMessage(":x: Erreur ! Merci d'ajouter un message.").then(msg => msg.delete(7000))
-           message.channel.sendMessage("@everyone :loudspeaker: INFORMATION POUR LES MEMBRES")
-             var alerteadmembed = new Discord.Embed()
+        message.channel.sendMessage("@everyone :loudspeaker: INFORMATION POUR LES MEMBRES")
+            var alerteadmembed = new Discord.Embed()
                   .setTitle(":warning: messg:")
                   .setColor("#FF4000")
-                message.channel.sendMessage(alerteadmembed)
+                  message.channel.sendMessage(alerteadmembed)
 
       }
 
