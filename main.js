@@ -64,6 +64,15 @@ message.author.sendMessage({embed});
        message.channel.guild.createChannel("support");
        message.channel.send('Vous devez allez dans #support on vous aidera !');
     }
+    
+    if(message.content === prefix + "don"){
+         var embednom = new Discord.RichEmbed()
+                    .setTitle(":gift_heart: Don pour Sky")
+                    .setDescription("Si tu souhaites me faire un don (même des petits), clique ici: https://www.paypal.me/ThomLorbrok ! En me fesant un don, tu as directement le rang: Staff Donateur, stylé non ?")
+                    .setColor("0x009FEF")
+                    .setFooter("StaffMe - Tous droits réservés")
+                message.channel.sendEmbed(embednom)
+                }
 
     if(message.content === prefix + "delete support") {
        if(message.channel.name === "support"){
