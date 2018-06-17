@@ -49,17 +49,23 @@ bot.on('message', message => {
         message.reply('Mon développeur ajoute des nouveautés presque tout les jours.')
     }
     
-    ///Commande -alerteadm
-      if (message.content.startsWith(prefix + "alerteadm")) {
-        if(!message.guild.member(message.author).hasPermission("MANAGE_ROLES")) return message.(":negative_squared_cross_mark: Vous n'avez pas la permission d'éxecuter cette commande. (commande éxecutée: .alerteadm)");
-        if(message.content === '.alerteadm') return message.channel.sendMessage(":x: Erreur ! Merci d'ajouter un message.").then(msg => msg.delete(7000))
-        message.channel.sendMessage("@everyone :loudspeaker: INFORMATION POUR LES MEMBRES")
-            var alerteadmembed = new Discord.Embed()
-                  .setTitle(":warning: messg:")
-                  .setColor("#FF4000")
-                  message.channel.sendMessage(alerteadmembed)
+    bot.on('message', message => {
+     if message.content.startsWith(prefix + 'alerte')
+     if (message.member.hasPermission("MANAGE_MESSAGES")){
 
-      }
+            let args = message.content.split(" ").slice(1);
+            let thingToEcho = args.join(" ")           
+            const Discord = require('discord.js');
+            var embednom = new Discord.RichEmbed()
+                    .setTitle("Alerte des administrateurs")
+                    .setDescription(thingToEcho)
+                    .setColor("0xA102F0")
+                    .setFooter("Copyright")
+    message.channel.sendEmbed(embednom)       
+        }else{
+              message.reply("Vous n'avez pas les permissions nécessaires pour effectuer cette commande.")
+        }
+    }
 
     if(message.content === prefix + "Google"){
     var embednom = new Discord.RichEmbed()
