@@ -38,7 +38,8 @@ bot.on('message', message => {
          .addField("-support", "Si besoin d'aide prononcer cette commande")
          .addField("-monavatar", "Pour voir votre avatar en url c'est ici !")
          .addField("-version", "Pour voir ma dernière version :p")
-         .addField("-infodiscord", "Informations sur le discord ton serveur discord !")
+         .addField("-infodiscord", "Informations sur le discord ton serveur discord !")     
+         .addField("-don", "Un petit don paypal ne fait pas de mal :p ")
          .setColor(0xFF0000);
                 message.channel.sendEmbed(embednom)
                 }
