@@ -61,6 +61,15 @@ bot.on('message', message => {
       if (message.content === prefix + "monavatar") {
     message.reply(message.author.avatarURL);
       }
+    
+    if(message.content === prefix + "adm"){
+    var embednom = new Discord.RichEmbed()
+                    .setTitle("**BIENVENUE DANS LE SUPPORT**")
+                    .setDescription("On va venir t'aider et explique ton problème au passage hein")
+                    .setColor("0x009FEF")
+                    .setFooter("StaffMe - Tous droits réservés")
+                message.channel.sendEmbed(embednom)
+                }
 
     if(message.content === prefix + "support") {
        message.channel.guild.createChannel("support");
