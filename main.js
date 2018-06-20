@@ -50,7 +50,7 @@ bot.on('message', message => {
         var embednom = new Discord.RichEmbed()
          .setTitle("Histoire disponible")
          .setDescription("")
-         .addField("-La montre de lou","Histoire pour les enfants")
+         .addField("-La montre de Lou","Histoire pour les enfants")
          .addField("-Eh bien mon cochon","Histoire 10-20 ans")
          .setColor(0x01B2FE);
                 message.channel.sendEmbed(embednom)
