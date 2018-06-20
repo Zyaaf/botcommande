@@ -188,7 +188,7 @@ message.channel.delete();
          .setColor(0x09FE01);
                 message.channel.sendEmbed(embednom)
                 }
-    if(message.content === prefix + "infodiscord")
+    if(message.content === prefix + "infodiscord") {
          var embed = new Discord.RichEmbed()
                 .setDescription("Informations à propos du discord")
                 .addField("Nom du discord", message.guild.name)
