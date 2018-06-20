@@ -45,6 +45,18 @@ bot.on('message', message => {
                 message.channel.sendEmbed(embednom)
                 }
     
+    if(message.content === prefix + "helpadm"){
+        if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.(":negative_squared_cross_mark: Vous n'avez pas la permission d'éxecuter cette commande. (commande éxecutée: -helpadm)");
+        var embednom = new Discod.RichEmbed()
+         .setTitle("Help Admin")
+         .setDescription("")
+         .addField("-bot","Info sur le bot")
+         .addField("-version","Ma version est ...")
+         .addField("-maj","Les mises à jour")
+         .setColor(0x01B2FE);
+                message.channel.sendEmbed(embednom)
+                }
+    
     if(message.content === prefix + "maj"){
         var embednom = new Discord.RichEmbed()
          .setTitle("Les mises à jour de StaffMe")
