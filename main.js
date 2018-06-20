@@ -180,14 +180,6 @@ message.channel.delete();
         
     }
     
-    if(message.content === prefix + "clear"){
-      var embednom = new Discord.RichEmbed()
-         .setTitle("SALON VIDE AVEC SUCCES")
-         .setDescription("")
-         .addField("Salon Vidé avec succes","Ce salon a bien été clear avec succes")
-         .setColor(0x09FE01);
-                message.channel.sendEmbed(embednom)
-                }
     if(message.content === prefix + "infodiscord") {
          var embed = new Discord.RichEmbed()
                 .setDescription("Informations à propos du discord")
