@@ -46,12 +46,12 @@ bot.on('message', message => {
     
         if(message.content === prefix + "helpthom"){
        var embed = new Discord.RichEmbed();
-            .setTitle("HelpThom");
-            .setDescription("Rappel pour thom");
-            .addField("-adm","Message Support");
-            .addField("-bot","Savoir ce que le bot est");
-            .addField("-version","Je suis en version....")
-            .setColor(0x02EACB);
+          embed.setTitle("HelpThom");
+          embed.setDescription("Rappel pour thom");
+          embed.addField("-adm","Message Support");
+          embed.addField("-bot","Savoir ce que le bot est");
+          embed.addField("-version","Je suis en version....")
+          embed.setColor(0x02EACB);
         message.author.sendMessage({embed});
     }
 
