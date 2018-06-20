@@ -61,9 +61,9 @@ bot.on('message', message => {
     if(message.content === prefix + "equipe"){
         var embednom = new Discord.RichEmbed()
          .setTitle(":necktie: Équipe de StaffMe")
-         .setDescription("L'équipe :")
+         .setDescription("")
          .addField("Thom.Lorbrok (Thom.Lorbrok#8058)", "Créateur , Fondateur , Développeur de StaffMe")
-         .setColor(0xD2CAC3);
+         .setColor(0x2B01FE);
                 message.channel.sendEmbed(embednom)
                 }
     
