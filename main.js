@@ -46,10 +46,10 @@ bot.on('message', message => {
                 }
     
     if(message.content === prefix + "helpadm"){
-        if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.(":negative_squared_cross_mark: Vous n'avez pas la permission d'éxecuter cette commande. (commande éxecutée: -helpadm)");
         var embednom = new Discod.RichEmbed()
          .setTitle("Help Admin")
          .setDescription("")
+         .addField("-adm","message support")
          .addField("-bot","Info sur le bot")
          .addField("-version","Ma version est ...")
          .addField("-maj","Les mises à jour")
