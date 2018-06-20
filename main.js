@@ -179,7 +179,15 @@ message.channel.delete();
         message.channel.send("Ma version est la 2.0 :gear: ");
         
     }
-
+    
+    if(message.content === prefix + "clear"){
+      var embednom = new Discord.RichEmbed()
+         .setTitle("SALON VIDE AVEC SUCCES")
+         .setDescription("")
+         .addField("Salon Vidé avec succes","Ce salon a bien été clear avec succes")
+         .setColor(0x09FE01);
+                message.channel.sendEmbed(embednom)
+                }
     if(message.content === prefix + "infodiscord")
          var embed = new Discord.RichEmbed()
                 .setDescription("Informations à propos du discord")
@@ -194,7 +202,6 @@ message.channel.delete();
                     .then(function(list){
                         message.channel.bulkDelete(list);
                     }, function(err){message.channel.send("Erreur")})
-            message.channel.send('Vous avez réussie à vider le salon.')}
                     console.log("La commande clear viens d'être effectué par un membre de l'équipe.")
     }
 })
