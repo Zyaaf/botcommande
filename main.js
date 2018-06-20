@@ -38,22 +38,12 @@ bot.on('message', message => {
          .addField("-support", "Si besoin d'aide prononcer cette commande")
          .addField("-monavatar", "Pour voir votre avatar en url c'est ici !")
          .addField("-version", "Pour voir ma dernière version :p")
-         .addField("-infodiscord", "Informations sur le discord ton serveur discord !")     
+         .addField("-infodiscord", "Informations sur le discord ton serveur discord !") 
+         .addField("-bot","info sur le bot")
          .addField("-don", "Un petit don paypal ne fait pas de mal :p ")
          .setColor(0xFF0000);
                 message.channel.sendEmbed(embednom)
                 }
-    
-        if(message.content === prefix + "helpthom"){
-       var embed = new Discord.RichEmbed();
-          embed.setTitle("HelpThom");
-          embed.setDescription("Rappel pour thom");
-          embed.addField("-adm","Message Support");
-          embed.addField("-bot","Savoir ce que le bot est");
-          embed.addField("-version","Je suis en version....")
-          embed.setColor(0x02EACB);
-        message.author.sendMessage({embed});
-    }
 
     // Nouveautés //
     if (message.content === prefix + "nouveautés") {
