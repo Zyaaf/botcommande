@@ -203,7 +203,15 @@ message.channel.delete();
                     .then(function(list){
                         message.channel.bulkDelete(list);
                     }, function(err){message.channel.send("Erreur")})
-            message.channel.send('Vous avez réussie à vider le salon.')}
+                                                }
+       if(message.content === prefix + "clear"){
+           var embed = new Discord.RichEmbed()
+                 .setTitle("SALON VIDE")
+                 .setDescription("")
+                 .addField("Salon vidé","Salon vidé avec succes par un membre de l'équipe")
+                 .setColor("Ox09FE01")
+                        message.channel.sendEmbed(embed)
+       }
                     console.log("La commande clear viens d'être effectué par un membre de l'équipe.")
     }
 })
