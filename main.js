@@ -87,7 +87,7 @@ bot.on('message', message => {
          .setTitle("MAINTENANCE FINI")
          .setDescription("")
          .addField("Maintenance Fini","Le bot a du nouveau dite .maj pour savoir !")
-         .setColor(0x01FE01);
+         .setColor(0xFE0000);
                 message.channel.sendEmbed(embednom)
                 }
     
