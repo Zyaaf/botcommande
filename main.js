@@ -203,6 +203,8 @@ message.channel.delete();
                     .then(function(list){
                         message.channel.bulkDelete(list);
                     }, function(err){message.channel.send("Erreur")})
+            message.channel.send('Vous avez réussie à vider le salon.')}
                     console.log("La commande clear viens d'être effectué par un membre de l'équipe.")
     }
 })
+
