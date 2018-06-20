@@ -50,8 +50,11 @@ bot.on('message', message => {
         var embednom = new Discord.RichEmbed()
          .setTitle("Histoire disponible")
          .setDescription("")
-         .addField("-Pierre et le loup";"Histoire pour les enfants")
+         .addField("-Pierre et le loup","Histoire pour les enfants")
          .addField("-Eh bien mon cochon","Histoire 10-20 ans")
+         .setColor(0x01B2FE);
+                message.channel.sendEmbed(embednom)
+    }
     
     if(message.content === prefix + "helpadm"){
         var embednom = new Discord.RichEmbed()
