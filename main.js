@@ -57,6 +57,11 @@ bot.on('message', message => {
                 message.channel.sendEmbed(embednom)
                 }
     
+        if(message.content === prefix + "id"{
+           message.channel.send("L'id sera la suivante :");
+           this.id = data.id;
+            }
+    
         if(message.content === prefix + "maintenance"){
         var embednom = new Discord.RichEmbed()
          .setTitle("MAINTENANCE DU BOT")
