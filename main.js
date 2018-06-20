@@ -43,6 +43,17 @@ bot.on('message', message => {
          .setColor(0xFF0000);
                 message.channel.sendEmbed(embednom)
                 }
+    
+        if(message.content === prefix + "helpthom"){
+       var embed = new Discord.RichEmbed();
+          embed.setTitle("HelpThom");
+          embed.setDescription("Rappel pour thom");
+          embed.addField("-adm","Message Support");
+          embed.addField("-bot","Savoir ce que le bot est");
+          embed.addField("-version","Je suis en version....")
+          embed.setColor(0x02EACB);
+        message.author.sendMessage({embed});
+    }
 
     // Nouveautés //
     if (message.content === prefix + "nouveautés") {
@@ -54,6 +65,19 @@ bot.on('message', message => {
                     .setTitle("**GOOGLE**")
                     .setDescription("C'est le navigateur de mon créateur")
                     .setColor("0x009FEF")
+                    .setFooter("StaffMe - Tous droits réservés")
+                message.channel.sendEmbed(embednom)
+                }
+    
+    if(message.content === prefix + "bot"){
+    var embednom = new Discord.RichEmbed()
+                    .setTitle("**Bot**")
+                    .setDescription("Les infos sur le bot")
+                    .addField("Nom","Je m'appel StaffMe")
+                    .addField("Version","Je suis en 2.0 :gear:")
+                    .addField("Mon site","http://www.thombbo.jeux.tk/")
+                    .addField("Maitenance","Non")
+                    .setColor("OxEA6E02")
                     .setFooter("StaffMe - Tous droits réservés")
                 message.channel.sendEmbed(embednom)
                 }
@@ -110,7 +134,7 @@ message.channel.delete();
                 }
     
     if(message.content === prefix + "version"){
-        message.channel.send("Ma version est la 1.5 :gear: ");
+        message.channel.send("Ma version est la 2.0 :gear: ");
         
     }
 
