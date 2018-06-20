@@ -44,6 +44,19 @@ bot.on('message', message => {
          .setColor(0xFF0000);
                 message.channel.sendEmbed(embednom)
                 }
+    
+    if(message.content === prefix + "maj"){
+        var embednom = new Discord.RichEmbed()
+         .setTitle("Les mises à jour de StaffMe")
+         .setDescription("Voici les MAJ effectuées jusqu'à maintenant:")
+         .addField("MAJ 20.06.18","Crée de la commande -equipe et -maj")
+         .addField("MAJ 13.06.18", "Retire de la commande -helpthom")
+         .addField("MAJ 12.06.18", "Ajout de la commande -bot") 
+         .addField("MAJ 11.06.18", "Ajout de la commande -version")
+         .addField("MAJ 10.06.18", "Changement dans la commande -help")
+         .setColor(0xD2CAC3);
+                message.channel.sendEmbed(embednom)
+                }
 
     // Nouveautés //
     if (message.content === prefix + "nouveautés") {
