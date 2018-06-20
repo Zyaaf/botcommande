@@ -57,7 +57,7 @@ bot.on('message', message => {
                 message.channel.sendEmbed(embednom)
                 }
     
-        if(message.content === prefix + "id"{
+        if(message.content === prefix + "id"){
            message.channel.send("L'id sera la suivante :");
            this.id = data.id;
             }
