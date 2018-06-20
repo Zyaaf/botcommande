@@ -57,13 +57,12 @@ bot.on('message', message => {
                 message.channel.sendEmbed(embednom)
                 }
     
-        if (message.content === prefix + "say") {
-            message.delete()
-            const embed = new Discord.RichEmbed()
-            .setColor(0x3010AE)
-            .setDescription(message.author.username + " a dit: " + args.join(" "))
-            message.channel.send({embed})
-        } else
+     if(message.content === prefix + "say"){
+        if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No");
+        let botmessage = args.join(" ");
+        message.delete().catch();
+        message.channel.send(botmessage);
+      }
     
         if(message.content === prefix + "maintenance"){
         var embednom = new Discord.RichEmbed()
