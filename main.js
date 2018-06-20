@@ -56,39 +56,6 @@ bot.on('message', message => {
                 message.channel.sendEmbed(embednom)
     }
     
-    if(message.content[0] === PREFIX) {
-    let splitMessage = message.content.split(" ");
-    if(splitMessage[0] === "-play") {
-        if(splitMessage.length === 2)
-        {
-            if(message.member.voiceChannel)
-            {
-                message.member.voiceChannel.join().then(connection => {
-                    dispatcher = connection.playArbitraryInput(splitMessage[1]);
-
-                    dispatcher.on("error", e => {
-                        console.log(e);
-                    });
-
-                    dispatcher.on("end", e => {
-                        dispatcher = undefined;
-                        console.log("Fin du son");
-                    });
-                }).catch(console.log);
-            }
-            else
-                sendError(message, "Erreur, Vous devez d'abord rejoindre un canal vocal");
-        }
-        else if(splitMessage[0] === "-pause") {
-            if(dispatcher !== undefined)
-                dispatcher.pause();
-        }
-        else if(splitMessage[0] === "-resume") {
-            if(dispatcher !== undefined)
-                dispatcher.resume();
-        }
-    }
-    
     if(message.content === prefix + "helpadm"){
         var embednom = new Discord.RichEmbed()
          .setTitle("Help Admin")
