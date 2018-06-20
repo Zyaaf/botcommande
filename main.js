@@ -46,14 +46,32 @@ bot.on('message', message => {
                 }
     
     if(message.content === prefix + "helpadm"){
-        var embednom = new Discod.RichEmbed()
+        var embednom = new Discord.RichEmbed()
          .setTitle("Help Admin")
-         .setDescription("")
+         .setDescription("Commande administration")
          .addField("-adm","message support")
          .addField("-bot","Info sur le bot")
          .addField("-version","Ma version est ...")
          .addField("-maj","Les mises à jour")
          .setColor(0x01B2FE);
+                message.channel.sendEmbed(embednom)
+                }
+    
+        if(message.content === prefix + "maintenance"){
+        var embednom = new Discord.RichEmbed()
+         .setTitle("MAINTENANCE DU BOT")
+         .setDescription("")
+         .addField("Maintenance","Le bot reviendra avec du nouveau !")
+         .setColor(0x01FE01);
+                message.channel.sendEmbed(embednom)
+                }
+    
+        if(message.content === prefix + "maintenance2"){
+        var embednom = new Discord.RichEmbed()
+         .setTitle("MAINTENANCE FINI")
+         .setDescription("")
+         .addField("Maintenance Fini","Le bot a du nouveau dite .maj pour savoir !")
+         .setColor(0x01FE01);
                 message.channel.sendEmbed(embednom)
                 }
     
