@@ -195,6 +195,7 @@ message.channel.delete();
                 .addField("Nombre d'utilisateurs sur ce discord", message.guild.memberCount)
                 .setColor("0x0000FF")
                     message.channel.sendEmbed(embed)
+          }
 
    if(message.content === prefix + "clear"){
             if (message.member.hasPermission("MANAGE_MESSAGES")){
