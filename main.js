@@ -57,6 +57,14 @@ bot.on('message', message => {
          .setColor(0xD2CAC3);
                 message.channel.sendEmbed(embednom)
                 }
+    
+   if(message.content === prefix + "equipe"){
+       var embednom = new Discord.RichEmbed()
+         .setTitle(":necktie: Équipe de StaffMe")
+         .addField("Thom.Lorbrok (Thom.Lorbrok#8058)","Créateur , Fondateur , Développeur de StaffMe")
+         .setcolor(0x2B01FE);
+                message.channel.sendEmbed(embednom)
+   }
 
     // Nouveautés //
     if (message.content === prefix + "nouveautés") {
