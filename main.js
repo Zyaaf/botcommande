@@ -193,7 +193,7 @@ message.channel.delete();
                 .setDescription("Informations à propos du discord")
                 .addField("Nom du discord", message.guild.name)
                 .addField("Nombre d'utilisateurs sur ce discord", message.guild.memberCount)
-                .setColor("0x0000FF")
+                .setColor("0x09FE01")
                     message.channel.sendEmbed(embed)
           }
 
@@ -206,7 +206,7 @@ message.channel.delete();
                                                 }
        if(message.content === prefix + "clear"){
            var embed = new Discord.RichEmbed()
-                 .setTitle("SALON VIDE")
+                 .setTitle("")
                  .setDescription("")
                  .addField("Salon vidé","Salon vidé avec succes par un membre de l'équipe")
                  .setColor("Ox09FE01")
