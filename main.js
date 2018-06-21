@@ -58,6 +58,7 @@ bot.on('message', message => {
          .addField("-bot","info sur le bot")
          .addField("-don", "Un petit don paypal ne fait pas de mal :p ")
          .addField("-histoires", "Savoir les histoires disponible")
+         .addField("-say [Text]", "Le bot répète le text")
          .setColor(0xFF0000);
                 message.channel.sendEmbed(embednom)
                 }
