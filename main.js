@@ -38,7 +38,7 @@ bot.on('message', message => {
 bot.on('message', message => {
     let args = message.content.split(" ").slice(1);
     
-    if(message.content.startsWith(prefix = "alerteadm"))  {
+    if(message.content.startsWith(prefix + "alerteadm"))  {
            message.delete()
            const embed = new Discord.RichEmbed()
            .setTitle("Information des administrateurs")
