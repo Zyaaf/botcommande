@@ -230,24 +230,6 @@ message.channel.delete();
         
     }
     
-bot.on('message', message => {
-    if (message.content.startsWith(prefix + "alerteadm")) {
-        if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")){
-        return message.reply(":negative_squared_cross_mark: Vous n'avez pas la permission d'éxecuter cette commande. (commande éxecutée: .alerteadm)");
-        }
-       else {
-            return message.channel.send(":x: Erreur ! Merci d'ajouter un message.").then(msg => msg.delete(7000));
-            
-            message.channel.send("@everyone :loudspeaker: INFORMATION POUR LES MEMBRES");
-                var embed = new Discord.RichEmbed()
-                .setTitle(":warning: messg:");
-                setColor(0xFF4000)
-                message.channel.send(embed);
-        }
-    }
-});
-
-    
     if(message.content === prefix + "infodiscord") {
          var embed = new Discord.RichEmbed()
                 .setDescription("Informations à propos du discord")
