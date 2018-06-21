@@ -31,8 +31,23 @@ bot.on('message', message => {
            .setColor(0xff0000)
             message.channel.sendEmbed(embed);
    
-       }
+       })
    
+});
+
+bot.on('message', message => {
+    let args = message.content.split(" ").slice(1);
+    
+    if(message.content.startsWith(prefix ° "alerteadm"))  {
+           message.delete()
+           const embed = new Discord.RichEmbed()
+           .setTitle("Information des administrateurs")
+           .addField(":warning: Informations: :warning: ","args.join(" ")")
+           .setColor(0xFE0000)
+            message.channel.sendEmbed(embed);
+        
+       })
+       
 });
 
 bot.on('message', message => {
