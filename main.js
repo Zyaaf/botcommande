@@ -90,15 +90,20 @@ bot.on('message', message => {
     }
     
     if(message.content === prefix + "helpadm"){
+    if (message.author.id === '371914890903945216') {
         var embednom = new Discord.RichEmbed()
          .setTitle("Help Admin")
          .setDescription("Commande administration")
+         .addField("-ownerclear","Commande que pour le créateur")
          .addField("-adm","message support")
          .addField("-bot","Info sur le bot")
          .addField("-version","Ma version est ...")
          .addField("-maj","Les mises à jour")
          .setColor(0x01B2FE);
                 message.channel.sendEmbed(embednom)
+        
+        else message.channel.send("Seul le créateur peut faire cela !")
+        
                 }
     
         if(message.content === prefix + "maintenance"){
