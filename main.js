@@ -37,17 +37,18 @@ bot.on('message', message => {
 
 bot.on('message', message => {
     let args = message.content.split(" ").slice(1);
-    
+
     if(message.content.startsWith(prefix + "alerteadm"))  {
+    if(!message.member.hasPermission(`ADMINISTRATOR`)) return message.channel.send(`Vous n'avez pas la permission d'executer cette commande !`);
            message.delete()
            const embed = new Discord.RichEmbed()
            .setTitle(" :warning: Information des administrateurs :warning: :")
            .setDescription(args.join(" "))
            .setColor(0xFE0000)
             message.channel.sendEmbed(embed);
-        
+
        }
-       
+
 });
 
 bot.on('message', message => {
