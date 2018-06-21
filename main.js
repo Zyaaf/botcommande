@@ -249,6 +249,6 @@ if(message.content === prefix + "ownerclear"){
                 message.channel.bulkDelete(list);
             }, function(err){message.channel.send("Erreur")})
                                         }
-    else message.channel.send("Seul le créateur de Armin peut faire cela ! (**Commande Anti-Raid**)")
+    else message.channel.send("Seul le créateur peut faire cela !")
                                     }
                                 });
