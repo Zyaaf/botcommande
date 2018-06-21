@@ -41,8 +41,8 @@ bot.on('message', message => {
     if(message.content.startsWith(prefix + "alerteadm"))  {
            message.delete()
            const embed = new Discord.RichEmbed()
-           .setTitle("Information des administrateurs")
-           .addField(":warning: Informations: :warning: ","args.join(" ")")
+           .setTitle(" :warning: Information des administrateurs :warning: :")
+           .setDescription(args.join(" "))
            .setColor(0xFE0000)
             message.channel.sendEmbed(embed);
         
