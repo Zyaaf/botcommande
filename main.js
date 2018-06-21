@@ -19,6 +19,22 @@ bot.on('guildMemberAdd', member => {
   channel.send(`Nous te souhaitons la bienvenue, ${member}`);
 })
 
+//say 
+bot.on('message', message => {
+    let args = message.content.split(" ").slice(1);
+   
+    if(message.content.startsWith(prefix + "say"))  {
+           message.delete()
+           const embed = new Discord.RichEmbed()
+           .setTitle(message.author.username + " a dit")
+           .setDescription(args.join(" "))
+           .setColor(0xff0000)
+            message.channel.sendEmbed(embed);
+   
+       }
+   
+});
+
 bot.on('message', message => {
     if (message.content === "ping"){
         message.reply("pong");
