@@ -91,7 +91,7 @@ bot.on('message', message => {
     
 bot.on('message', message => {
     if(message.content === prefix + "helpadm"){ 
-        if (message.author.id === '371914890903945216') {
+        if (message.author.id === '371914890903945216') { 
         
         var embednom = new Discord.RichEmbed()
          .setTitle("Help Admin")
@@ -102,7 +102,7 @@ bot.on('message', message => {
          .addField("-version","Ma version est ...")
          .addField("-maj","Les mises à jour")
          .setColor(0x01B2FE);
-                message.author.sendEmbed(embednom)
+                message.author.sendEmbed(embednom);
     }
         else message.channel.send("Seul le créateur peut faire cela !")
     }
