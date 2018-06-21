@@ -31,7 +31,7 @@ bot.on('message', message => {
            .setColor(0xff0000)
             message.channel.sendEmbed(embed);
    
-       })
+       }
    
 });
 
@@ -46,7 +46,7 @@ bot.on('message', message => {
            .setColor(0xFE0000)
             message.channel.sendEmbed(embed);
         
-       })
+       }
        
 });
 
