@@ -198,6 +198,22 @@ message.channel.delete();
         
     }
     
+        ///Commande -alerteadm
+      if (message.content.startsWith(prefix + "alerteadm")) {
+        if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")){
+         return message.(":negative_squared_cross_mark: Vous n'avez pas la permission d'éxecuter cette commande. (commande éxecutée: .alerteadm)");
+        }
+        if(message.content === '.alerteadm') {
+         return message.channel.sendMessage(":x: Erreur ! Merci d'ajouter un message.").then(msg => msg.delete(7000));
+        }
+        message.channel.sendMessage("@everyone :loudspeaker: INFORMATION POUR LES MEMBRES");
+            var alerteadmembed = new Discord.Embed();
+            .setTitle(":warning: messg:");
+            .setColor("#FF4000");
+            message.channel.sendMessage(alerteadmembed);
+
+      }
+    
     if(message.content === prefix + "infodiscord") {
          var embed = new Discord.RichEmbed()
                 .setDescription("Informations à propos du discord")
