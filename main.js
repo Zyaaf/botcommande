@@ -239,22 +239,16 @@ message.channel.delete();
                 .setColor("0x09FE01")
                     message.channel.sendEmbed(embed)
           }
+});
 
-   if(message.content === prefix + "clear"){
-            if (message.member.hasPermission("MANAGE_MESSAGES")){
-                message.channel.fetchMessages()
-                    .then(function(list){
-                        message.channel.bulkDelete(list);
-                    }, function(err){message.channel.send("Erreur")})
-                                                }
-       if(message.content === prefix + "clear"){
-           var embed = new Discord.RichEmbed()
-                 .setTitle("")
-                 .setDescription("")
-                 .addField("Salon vidé","Salon vidé avec succes par un membre de l'équipe")
-                 .setColor("Ox09FE01")
-                        message.channel.sendEmbed(embed)
-       }
-                    console.log("La commande clear viens d'être effectué par un membre de l'équipe.")
-    }
-})
+ bot.on('message', message => {
+if(message.content === prefix + "ownerclear"){
+    if (message.author.id === '371914890903945216') {
+        message.channel.fetchMessages()
+            .then(function(list){
+                message.channel.bulkDelete(list);
+            }, function(err){message.channel.send("Erreur")})
+                                        }
+    else message.channel.send("Seul le créateur de Armin peut faire cela ! (**Commande Anti-Raid**)")
+                                    }
+                                });
