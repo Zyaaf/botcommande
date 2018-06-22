@@ -79,6 +79,17 @@ bot.on('message', message => {
                 message.channel.sendEmbed(embednom)
                 }
     
+    if(message.content === prefix + "monprofil"){
+        var embednom = new Discord.RichEmbed()
+         .setTitle(`Voici le profil de ${message.author.username}`)
+         .setDescription("")
+         .addField("Ton id :", msgauthor, true)
+         .addField("Ma team:","TeamStaffMe")
+         .addField("Mon nom:", `${message.author.username}`)
+         .setColor(0xFF0000);
+                message.author.sendEmbed(embednom)
+    }
+    
     if(message.content === prefix + "histoires"){
         var embednom = new Discord.RichEmbed()
          .setTitle("Histoire disponible")
