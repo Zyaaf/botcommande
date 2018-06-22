@@ -81,11 +81,11 @@ bot.on('message', message => {
     
     if(message.content === prefix + "monprofil"){
         var embednom = new Discord.RichEmbed()
-         .setTitle(`Voici le profil de ${message.author.username}`)
+         .setTitle(`Voici le profil de ${message.author.username}` true)
          .setDescription("")
-         .addField("Ton id :", msgauthor, true)
-         .addField("Ma team:","TeamStaffMe")
-         .addField("Mon nom:", `${message.author.username}`)
+         .addField("Ton id :", `${user}` true)
+         .addField("Ma team:","TeamStaffMe" true)
+         .addField("Mon nom:", `${message.author.username}` true)
          .setColor(0xFF0000);
                 message.author.sendEmbed(embednom)
     }
