@@ -102,7 +102,11 @@ const sicon = bot.user.displayAvatarURL
       }
     
     if(message.content === prefix + "channelid"){
-        message.channel.send(message.channel.id)
+        var embednom = new Discord.RichEmbed()
+         .setTitle(`Voici l'id du channel : {channel}`)
+         .setDescription(message.channel.id)
+         .setColor(0x31BA4D)
+                message.channel.sendEmbed(embednom)
     }
     
     if(message.content === prefix + "histoires"){
