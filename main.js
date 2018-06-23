@@ -79,7 +79,7 @@ bot.on('message', message => {
                 message.channel.sendEmbed(embednom)
                 }
     
-    if (msg.content === '-online'){
+    if(message.content === prefix + "online"){
 msg.delete();
 const sicon = bot.user.displayAvatarURL
 
