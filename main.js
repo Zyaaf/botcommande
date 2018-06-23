@@ -79,6 +79,10 @@ bot.on('message', message => {
                 message.channel.sendEmbed(embednom)
                 }
     
+    if(message.content === prefix + "monid"){
+        message.channel.send(message.author.id)
+    }
+    
 if (message.content === '-online'){
 message.delete();
 const sicon = bot.user.displayAvatarURL
