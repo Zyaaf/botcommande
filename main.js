@@ -96,6 +96,10 @@ const sicon = bot.user.displayAvatarURL
               message.channel.send(help_embed).catch(async(err) => {console.log(err)});
       }
     
+    if(message.content === prefix + "channelid"){
+        message.channel.send(message.channel.id)
+    }
+    
     if(message.content === prefix + "histoires"){
         var embednom = new Discord.RichEmbed()
          .setTitle("Histoire disponible")
