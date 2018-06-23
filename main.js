@@ -279,5 +279,5 @@ if(message.content === prefix + "ownerclear"){
        }
                     console.log("La commande clear viens d'être effectué par un membre de l'équipe.")
     }
-})
+});
 
