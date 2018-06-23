@@ -85,10 +85,10 @@ const sicon = bot.user.displayAvatarURL
 
           var help_embed = new Discord.RichEmbed()
           
-              .setTitle("Voici depuis quand VirtualyBot est en ligne :")
+              .setTitle("Voici depuis quand StaffMe est en ligne :")
               .addField("En ligne depuis:" , (Math.round(bot.uptime / (1000 * 60 * 60))) + 'h  ' + (Math.round(bot.uptime / (1000 * 60)) % 60) + 'min ' + (Math.round(bot.uptime / 1000) % 60) + 's')
               .setColor("#389aea")
-              .setFooter("Notre site: http://virtualitybot.jeux.tk")
+              .setFooter("Notre site: http://thombbo.tk/")
               message.channel.send(help_embed).catch(async(err) => {console.log(err)});
       }
     
