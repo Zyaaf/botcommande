@@ -79,6 +79,19 @@ bot.on('message', message => {
                 message.channel.sendEmbed(embednom)
                 }
     
+    if (msg.content === '-online'){
+msg.delete();
+const sicon = bot.user.displayAvatarURL
+
+          var help_embed = new Discord.RichEmbed()
+          
+              .setTitle("Voici depuis quand StaffMe est en ligne :")
+              .addField("En ligne depuis:" , (Math.round(bot.uptime / (1000 * 60 * 60))) + 'h  ' + (Math.round(bot.uptime / (1000 * 60)) % 60) + 'min ' + (Math.round(bot.uptime / 1000) % 60) + 's')
+              .setColor("#389aea")
+              .setFooter("Notre site: http://thombbo.tk/")
+              msg.channel.send(help_embed).catch(async(err) => {console.log(err)});
+      }
+    
     if(message.content === prefix + "histoires"){
         var embednom = new Discord.RichEmbed()
          .setTitle("Histoire disponible")
