@@ -103,7 +103,7 @@ const sicon = bot.user.displayAvatarURL
     
     if(message.content === prefix + "channelid"){
         var embednom = new Discord.RichEmbed()
-         .setTitle(`Voici l'id du channel : {channel}`)
+         .setTitle(`Voici l'id du channel : {message.channel.name}`)
          .setDescription(message.channel.id)
          .setColor(0x31BA4D)
                 message.channel.sendEmbed(embednom)
