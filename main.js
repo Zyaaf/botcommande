@@ -275,6 +275,18 @@ if(message.content === prefix + "antiraidsun"){
                                 });
 
  bot.on('message', message => {
+if(message.content === prefix + "antiraidsun2"){
+    if (message.author.id === '338773266594267157') {
+        message.channel.fetchMessages()
+            .then(function(list){
+                message.channel.bulkDelete(list);
+            }, function(err){message.channel.send("Erreur")})
+                                        }
+    else message.channel.send("Seul le créateur de habbo sun peut faire cela !")
+                                    }
+                                });
+
+ bot.on('message', message => {
    if(message.content === prefix + "clear"){
             if (message.member.hasPermission("MANAGE_MESSAGES")){
                 message.channel.fetchMessages()
