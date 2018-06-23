@@ -80,7 +80,12 @@ bot.on('message', message => {
                 }
     
     if(message.content === prefix + "monid"){
-        message.channel.send(message.author.id)
+        var embednom = new Discord.RichEmbed()
+           .setTitle(`L'id de : ${message.author.username}`) 
+           .setDescription(message.author.id)
+           .setFooter("StaffMe - Tout droits réservés")
+           .setColor(0x31BA4D)
+        message.channel.send(embednom)
     }
     
 if (message.content === '-online'){
