@@ -262,6 +262,7 @@ if(message.content === prefix + "ownerclear"){
                                     }
                                 });
 
+ bot.on('message', message => {
    if(message.content === prefix + "clear"){
             if (message.member.hasPermission("MANAGE_MESSAGES")){
                 message.channel.fetchMessages()
