@@ -42,6 +42,7 @@ bot.on('message', message => {
             message.channel.send(":gear: Compris ! Je me redémarre")
             message.channel.send(":gear: Redémarrage effectué avec succès")
             console.log("Le bot a été reload par la commande a!botreload par le staff : " + message.author.username)
+            bot.destroy()
             bot.login(token)
             } else {message.channel.send("Seul le créateur de StaffMe peut faire cela !")}
         }
