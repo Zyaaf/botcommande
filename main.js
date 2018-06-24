@@ -82,6 +82,10 @@ bot.on('message', message => {
         console.log('ping pong');
     }
     
+    if(message.content === prefix + "serveurs"){
+message.channel.send(`Je suis dans client.getGuilds.size() serveur`)
+}
+    
     if(message.content === prefix + "help"){
         var embednom = new Discord.RichEmbed()
          .setTitle("Help page")
