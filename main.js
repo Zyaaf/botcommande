@@ -139,10 +139,6 @@ bot.on('message', message => {
         message.channel.sendEmbed(embednom)
     }
     
-    if(message.content === prefix + "serveurs"){
-       message.channel.send(`Je suis dans ${client.getGuilds.size()} serveur `)
-    }
-    
     if(message.content === prefix + "blagues"){
         var embednom = new Discord.RichEmbed()
             .setTitle("StaffMe - Blague de merde")
