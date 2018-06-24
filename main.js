@@ -165,7 +165,7 @@ const sicon = bot.user.displayAvatarURL
               .setTitle("Voici depuis quand StaffMe est en ligne :")
               .addField("En ligne depuis:" , (Math.round(bot.uptime / (1000 * 60 * 60))) + 'h  ' + (Math.round(bot.uptime / (1000 * 60)) % 60) + 'min ' + (Math.round(bot.uptime / 1000) % 60) + 's')
               .setColor("#389aea")
-              .setFooter("Notre site: http://thombbo.tk/")
+              .setFooter("Notre site: http://staffme.tk/")
               message.channel.send(help_embed).catch(async(err) => {console.log(err)});
       }
     
