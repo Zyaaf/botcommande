@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const PREFIX = ("NDQ4MTk5NDc4NTQ2MTM3MDg4.DhEMYA.I9S6NkM_SlC6GCiFBJRPfzlk0-8")
+const token = ("NDQ4MTk5NDc4NTQ2MTM3MDg4.DhEMYA.I9S6NkM_SlC6GCiFBJRPfzlk0
 
 var bot = new Discord.Client();
 var prefix = ("-");
@@ -42,7 +42,7 @@ bot.on('message', message => {
             message.channel.send(":gear: Compris ! Je me redémarre")
             message.channel.send(":gear: Redémarrage effectué avec succès")
             console.log("Le bot a été reload par la commande a!botreload par le staff : " + message.author.username)
-            bot.login(PREFIX)
+            bot.login(token)
             } else {message.channel.send("Seul le créateur de StaffMe peut faire cela !")}
         }
     });
@@ -81,7 +81,7 @@ bot.on('message', message => {
            const embed = new Discord.RichEmbed()
            .setTitle(" :warning: Information des administrateurs :warning: :")
            .setDescription(args.join(" "))
-           .setColor(0xFE0000)
+           .setColor(0xFB0000)
             message.channel.sendEmbed(embed);
 
        }
