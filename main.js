@@ -100,6 +100,9 @@ bot.on('message', message => {
          .addField("-don", "Un petit don paypal ne fait pas de mal :p ")
          .addField("-histoires", "Savoir les histoires disponible")
          .addField("-say [Text]", "Le bot répète le text")
+         .addField("-sondage [TEXT] (réservé au admin", "Permet de faire des sondages")
+         .addField("-ownerclear", "Réservé au créateur")
+         .addField("-blagues","Simplement des blagues :) ")
          .setColor(0xFF0000);
                 message.channel.sendEmbed(embednom)
                 }
