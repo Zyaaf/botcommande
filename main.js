@@ -35,6 +35,12 @@ bot.on('message', message => {
    
 });
 
+bot.on('message", message => {
+       
+     if (message.content
+  
+});
+
 bot.on('message', message => {
     let args = message.content.split(" ").slice(1);
 
@@ -331,6 +337,25 @@ if(message.content === prefix + "ownerclear"){
     else message.channel.send("Seul le créateur peut faire cela !")
                                     }
                                 });
+
+if (message.content.startsWith(prefix + "sondage")) {
+    if(message.author.id === "371914890903945216"){
+        let args = message.content.split(" ").slice(1);
+        let thingToEcho = args.join(" ")
+        var embed = new Discord.RichEmbed
+            .setDescription("Sondage")
+            .addField(thingToEcho, "Répondre avec :white_check_mark: ou :x:")
+            .setColor(OxB40404)
+            .setTimestamp()
+        message.guild.channels.find("GENERAL", "sondage").sendEmbed(embed)
+        .then(function (message) {
+            message.react("✅")
+            message.react("❌")
+        }).catch(function() {
+        });
+        }else{
+            return message.reply("Tu n'as pas la permission.")
+})})
 
  bot.on('message', message => {
 if(message.content === prefix + "antiraidsun"){
