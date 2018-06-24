@@ -38,12 +38,12 @@ bot.on('message', message => {
 
 bot.on('message', message => {
         if(message.content === prefix + "botreload" ) {
-            if (message.author.id === '338623853318373386'){
+            if (message.author.id === '371914890903945216'){
             message.channel.send(":gear: Compris ! Je me redémarre")
             message.channel.send(":gear: Redémarrage effectué avec succès")
             console.log("Le bot a été reload par la commande a!botreload par le staff : " + message.author.username)
             bot.login(TOKEN)
-            } else {message.channel.send("Seul le créateur de Armin peut faire cela !")}
+            } else {message.channel.send("Seul le créateur de StaffMe peut faire cela !")}
         }
     });
 
