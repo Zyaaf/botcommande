@@ -84,7 +84,7 @@ bot.on('message', message => {
             .setTitle("StaffMe - Blague de merde")
             .addField("Qu'est ce qui est vert,se déplace sous l'eau, et fair buzzzzz ?","Un chou marin ruche")
             .setColor(0x5B4EB5)
-        message.channel.sendEmned(embednom)
+        message.channel.sendEmbed(embednom)
     }
     
     if(message.content === prefix + "blagues"){
@@ -92,7 +92,7 @@ bot.on('message', message => {
             .setTitle("StaffMe - Blague de merde")
             .setDescription("Ta mère est tellement moche que ton père est capable de l'emmener au travail pour éviter de lui dire au revoir en l'embrassant.")
             .setColor(0x5B4EB5)
-        message.channel.sendEmned(embednom)
+        message.channel.sendEmbed(embednom)
     }
     
     if(message.content === prefix + "blagues"){
@@ -100,7 +100,7 @@ bot.on('message', message => {
             .setTitle("StaffMe - Blague de merde")
             .setDescription("Ta mère est tellement radine que, quand elle vomit, elle sert les dents pour garder les morceaux.")
             .setColor(0x5B4EB5)
-        message.channel.sendEmned(embednom)
+        message.channel.sendEmbed(embednom)
     }
     
     if(message.content === prefix + "blagues"){
@@ -108,7 +108,7 @@ bot.on('message', message => {
             .setTitle("StaffMe - Blague de merde")
             .setDescription("Si tu vois un bateau qui flotte sur l'eau c'est que ta mère n'est pas à bord.")
             .setColor(0x5B4EB5)
-        message.channel.sendEmned(embednom)
+        message.channel.sendEmbed(embednom)
     }
     
     if(message.content === prefix + "blagues"){
@@ -116,7 +116,7 @@ bot.on('message', message => {
             .setTitle("StaffMe - Blague de merde")
             .addField("Quel est le comble pour un marin ??","De couler du nez !")
             .setColor(0x5B4EB5)
-        message.channel.sendEmned(embednom)
+        message.channel.sendEmbed(embednom)
     }
 
      if(message.content === prefix + "monid"){
