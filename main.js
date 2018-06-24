@@ -60,7 +60,7 @@ bot.on('message', message => {
         }
 });
 
-Bot.on("message", async message => {
+bot.on("message", async message => {
 
   if(message.content === prefix + "mute"){
 
