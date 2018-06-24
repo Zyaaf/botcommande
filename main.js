@@ -39,6 +39,7 @@ bot.on('message', message => {
 bot.on('message', message => {
         if(message.content === prefix + "botreload" ) {
             if (message.author.id === '371914890903945216'){
+            message.delete()
             message.channel.send(":gear: Compris ! Je me redémarre")
             message.channel.send(":gear: Redémarrage effectué avec succès")
             console.log("Le bot a été reload par la commande a!botreload par le staff : " + message.author.username)
