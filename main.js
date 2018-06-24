@@ -44,7 +44,7 @@ bot.on('message', message => {
        var embed = new Discord.RichEmbed
            .setDescription("Sondage")
            .addField(thingToEcho, "Répondre avec :white_check_mark: ou :x:")
-           .setColor(OxB40404)
+           .setColor(0xB40404)
            .setTimestamp()
        message.channel.sendEmbed(embed)
        .then(function (message) {
