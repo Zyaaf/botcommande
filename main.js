@@ -107,6 +107,7 @@ bot.on('message', message => {
                 message.channel.sendEmbed(embednom)
                 }
     if(message.content === prefix + "serveurs"){
+       message.delete()
        message.channel.send("Je suis dans " + bot.guilds.size + " serveurs")}
     
     if(message.content === prefix + "blagues"){
