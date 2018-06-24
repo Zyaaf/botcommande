@@ -35,23 +35,6 @@ bot.on('message', message => {
    
 });
 
-//say 
-bot.on('message', message => {
-    let args = message.content.split(" ").slice(1);
-   
-    if(message.content.startsWith(prefix + "vraioufaux"))  {
-           message.delete()
-           const embed = new Discord.RichEmbed()
-           .setTitle(":question: VRAI OU FAUX ?")
-           .setDescription("")
-           .addField("args.join(" ")","Répondre avec :white_check_mark: ou :x:")
-           .setColor(0xff0000)
-            message.channel.sendEmbed(embed);
-   
-       }
-   
-});
-
 bot.on('message', message => {
     let args = message.content.split(" ").slice(1);
 
