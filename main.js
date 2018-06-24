@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const PREFIX = ("NDQ4MTk5NDc4NTQ2MTM3MDg4.DhEMYA.I9S6NkM_SlC6GCiFBJRPfzlk0-8")
 
 var bot = new Discord.Client();
 var prefix = ("-");
@@ -34,6 +35,17 @@ bot.on('message', message => {
        }
    
 });
+
+bot.on('message', message => {
+        if(message.content === prefix + "botreload" ) {
+            if (message.author.id === '338623853318373386'){
+            message.channel.send(":gear: Compris ! Je me redémarre")
+            message.channel.send(":gear: Redémarrage effectué avec succès")
+            console.log("Le bot a été reload par la commande a!botreload par le staff : " + message.author.username)
+            bot.login(TOKEN)
+            } else {message.channel.send("Seul le créateur de Armin peut faire cela !")}
+        }
+    });
 
 bot.on('message', message => {
        
