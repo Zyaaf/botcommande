@@ -14,10 +14,26 @@ bot.user.setActivity("StaffMe | -help || "  + bot.guilds.size + " serveurs")
 }) 
 
 bot.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.find('index', 'discussion');
- if (!channel) return;
-  channel.send(`Nous te souhaitons la bienvenue, ${member}`);
-})
+  const welcomechannel = member.guild.channels.find('name', 'bienvenue')
+  
+  var embed = new Discord.RichEmbed()
+  .setColor('#76D880')
+  .setTimestamp()
+  .addField(`:arrow_right: **${member.user.username}**`,':inbox_tray: Bienvenue a toi !! ')
+  return welcomechannel.send({embed})
+
+});
+
+bot.on('guildMemberRemove', member => {
+  const welcomechannel = member.guild.channels.find('name', 'aurevoir')
+  
+  var embed = new Discord.RichEmbed()
+  .setColor('#DE5454')
+  .setTimestamp()
+  .addField(`:outbox_tray: **${member.user.username}**`, "A quitté le serveur !!")
+  return welcomechannel.send(embed)
+  
+});
 
 //say 
 bot.on('message', message => {
