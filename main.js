@@ -53,6 +53,31 @@ bot.on('message', message => {
 
 bot.on('message', message => {
        
+    if (message.content.startsWith(prefix + "vraioufaux")) {
+   if(message.author.id === "371914890903945216"){
+       message.delete()
+       let args = message.content.split(" ").slice(1);
+       let thingToEcho = args.join(" ")
+       var embed = new Discord.RichEmbed()
+           .setDescription("Vrai ou faux")
+           .addField(thingToEcho, "Répondre avec :white_check_mark: ou :x:")
+           .setColor(0xB40404)
+           .setTimestamp()
+       message.guild.channels.find('name', 'vraioufaux').sendEmbed(embed)
+       .then(function (message) {
+           message.react("✅")
+           message.react("❌")
+       }).catch(function() {
+       });
+       }else{
+           return message.reply("Tu n'as pas la permission.")
+            }
+
+        }
+});
+
+bot.on('message', message => {
+       
     if (message.content.startsWith(prefix + "sondage")) {
    if(message.author.id === "371914890903945216"){
        message.delete()
@@ -116,20 +141,22 @@ bot.on('message', message => {
          .addField("-don", "Un petit don paypal ne fait pas de mal :p ")
          .addField("-histoires", "Savoir les histoires disponible")
          .addField("-say [Text]", "Le bot répète le text")
-         .addField("-sondage [TEXT] (réservé au admin", "Permet de faire des sondages")
+         .addField("-sondage [TEXT] (réservé au créateur)", "Permet de faire des sondages")
+         .addField("vraioufaux [TEXT] (réservé au créateur)", "Permet de faire des vrai ou faux")
+         .addField("-systsondage", "Permet de faire le système des sondage")
+         .addField("-systvraioufaux", "Permet de faire le système des vraioufaux")
          .addField("-ownerclear", "Réservé au créateur")
          .addField("-blagues","Simplement des blagues :) ")
          .setColor(0xFF0000);
                 message.channel.sendEmbed(embednom)
                 }
-    if(message.content.startsWith(prefix + "nom")){
-      message.delete().catch(O_o=>{});
-      if(message.author.id !== "371914890903945216") return message.channel.sendMessage("Vous n'avez pas la permission **RENAME_BOT** !!");
-      client.user.setUsername(message.content.substr(9));
-      
-      
-      
     
+    if(message.content === prefix + "systsondage"){
+       message.channel.guild.createChannel("sondage");
+    }
+    
+    if(message.content === prefix + "systvraioufaux"){
+       message.channel.guild.createChannel("vraioufaux");
     }
     
     if(message.content === prefix + "serveurs"){
