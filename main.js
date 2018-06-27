@@ -131,7 +131,6 @@ bot.on('message', message => {
       
     
     }
-    });
     
     if(message.content === prefix + "serveurs"){
        message.delete()
