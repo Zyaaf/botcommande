@@ -122,6 +122,17 @@ bot.on('message', message => {
          .setColor(0xFF0000);
                 message.channel.sendEmbed(embednom)
                 }
+    if(message.content.startsWith(prefix + "nom")){
+      message.delete().catch(O_o=>{});
+      if(message.author.id !== "371914890903945216") return message.channel.sendMessage("Vous n'avez pas la permission **RENAME_BOT** !!");
+      client.user.setUsername(message.content.substr(9));
+      
+      
+      
+    
+    }
+    });
+    
     if(message.content === prefix + "serveurs"){
        message.delete()
        message.channel.send("Je suis dans " + bot.guilds.size + " serveurs")}
