@@ -203,17 +203,7 @@ bot.on('message', message => {
         message.channel.sendEmbed(embednom)
     }
     
-     if(message.content === prefix + "monprofil"){
-         var embednom = new Discord.RichEmbed()
-             .setTitle(`Voici le profil de ${message.author.username}`, true)
-             .setDescription("En dessous seront vos informations")
-             .setImage(`${message.author.avatar}`, true)
-             .addField("Voici votre id : ",`${message.author.id}`, true)
-             .setFooter("Votre profil")
-             .setColor(0x31BA4D)
-         message.channel.send(embednom)
-   }
-
+     //id
      if(message.content === prefix + "monid"){
         var embednom = new Discord.RichEmbed()
            .setTitle(`L'id de : ${message.author.username}`) 
