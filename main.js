@@ -124,6 +124,7 @@ bot.on('message', message => {
     }
     
     if(message.content === prefix + "help"){
+       message.delete()
         var embednom = new Discord.RichEmbed()
          .setTitle("Help page")
          .setDescription("Les commandes sont dessous :p ")
@@ -152,10 +153,12 @@ bot.on('message', message => {
                 }
     
     if(message.content === prefix + "systsondage"){
+       message.delete()
        message.channel.guild.createChannel("sondage");
     }
     
     if(message.content === prefix + "systvraioufaux"){
+       message.delete()
        message.channel.guild.createChannel("vraioufaux");
     }
     
@@ -164,6 +167,7 @@ bot.on('message', message => {
        message.channel.send("Je suis dans " + bot.guilds.size + " serveurs")}
     
     if(message.content === prefix + "blagues"){
+        message.delete()
         var embednom = new Discord.RichEmbed()
             .setTitle("StaffMe - Blague de merde")
             .addField("Qu'est ce qui est vert,se déplace sous l'eau, et fair buzzzzz ?","Un chou marin ruche")
@@ -172,6 +176,7 @@ bot.on('message', message => {
     }
     
     if(message.content === prefix + "blagues"){
+        message.delete()
         var embednom = new Discord.RichEmbed()
             .setTitle("StaffMe - Blague de merde")
             .setDescription("Ta mère est tellement moche que ton père est capable de l'emmener au travail pour éviter de lui dire au revoir en l'embrassant.")
@@ -180,6 +185,7 @@ bot.on('message', message => {
     }
     
     if(message.content === prefix + "blagues"){
+        message.delete()
         var embednom = new Discord.RichEmbed()
             .setTitle("StaffMe - Blague de merde")
             .setDescription("Ta mère est tellement radine que, quand elle vomit, elle sert les dents pour garder les morceaux.")
@@ -188,6 +194,7 @@ bot.on('message', message => {
     }
     
     if(message.content === prefix + "blagues"){
+       message.delete()
         var embednom = new Discord.RichEmbed()
             .setTitle("StaffMe - Blague de merde")
             .setDescription("Si tu vois un bateau qui flotte sur l'eau c'est que ta mère n'est pas à bord.")
@@ -196,6 +203,7 @@ bot.on('message', message => {
     }
     
     if(message.content === prefix + "blagues"){
+        message.delete()
         var embednom = new Discord.RichEmbed()
             .setTitle("StaffMe - Blague de merde")
             .addField("Quel est le comble pour un marin ??","De couler du nez !")
@@ -205,6 +213,7 @@ bot.on('message', message => {
     
      //id
      if(message.content === prefix + "monid"){
+         message.delete()
         var embednom = new Discord.RichEmbed()
            .setTitle(`L'id de : ${message.author.username}`) 
            .setDescription(message.author.id)
@@ -227,6 +236,7 @@ const sicon = bot.user.displayAvatarURL
       }
     
     if(message.content === prefix + "channelid"){
+        message.delete()
         var embednom = new Discord.RichEmbed()
          .setTitle(`Voici l'id du channel : ${message.channel.name}`)
          .setDescription(message.channel.id)
@@ -235,6 +245,7 @@ const sicon = bot.user.displayAvatarURL
     }
     
     if(message.content === prefix + "histoires"){
+        message.delete()
         var embednom = new Discord.RichEmbed()
          .setTitle("Histoire disponible")
          .setDescription("")
@@ -246,6 +257,7 @@ const sicon = bot.user.displayAvatarURL
     
 bot.on('message', message => {
     if(message.content === prefix + "helpadm"){ 
+        message.delete()
         if (message.author.id === '371914890903945216') { 
         
         var embednom = new Discord.RichEmbed()
@@ -266,6 +278,7 @@ bot.on('message', message => {
 
     
         if(message.content === prefix + "maintenance"){
+           message.delete()
         var embednom = new Discord.RichEmbed()
          .setTitle("MAINTENANCE DU BOT")
          .setDescription("")
@@ -274,10 +287,12 @@ bot.on('message', message => {
                 message.channel.sendEmbed(embednom)
                 }
         if(message.content === prefix + "Eh bien mon cochon"){
+           message.delete()
             message.channel.send("https://jeunesse.short-edition.com/oeuvre/10-20/eh-bien-mon-cochon")
         }
     
         if(message.content === prefix + "maintenance2"){
+           message.delete()
         var embednom = new Discord.RichEmbed()
          .setTitle("MAINTENANCE FINI")
          .setDescription("")
@@ -287,6 +302,7 @@ bot.on('message', message => {
                 }
     
     if(message.content === prefix + "maj"){
+       message.delete()
         var embednom = new Discord.RichEmbed()
          .setTitle("Les mises à jour de StaffMe")
          .setDescription("Voici les MAJ effectuées jusqu'à maintenant:")
@@ -300,6 +316,7 @@ bot.on('message', message => {
                 }
     
     if(message.content === prefix + "equipe"){
+        message.delete()
         var embednom = new Discord.RichEmbed()
          .setTitle(":necktie: Équipe de StaffMe")
          .setDescription("")
@@ -310,10 +327,12 @@ bot.on('message', message => {
     
     // Nouveautés //
     if (message.content === prefix + "nouveautés") {
+        message.delete()
         message.reply('Mon développeur ajoute des nouveautés presque tout les jours.')
     }
 
     if(message.content === prefix + "Google"){
+        message.delete()
     var embednom = new Discord.RichEmbed()
                     .setTitle("**GOOGLE**")
                     .setDescription("C'est le navigateur de mon créateur")
@@ -323,6 +342,7 @@ bot.on('message', message => {
                 }
     
     if(message.content === prefix + "bot"){
+        message.delete()
     var embednom = new Discord.RichEmbed()
                     .setTitle("**Bot**")
                     .setDescription("Les infos sur le bot")
@@ -336,10 +356,12 @@ bot.on('message', message => {
                 }
 
       if (message.content === prefix + "monavatar") {
+          message.delete()
     message.reply(message.author.avatarURL);
       }
     
     if(message.content === prefix + "adm"){
+        message.delete()
     var embednom = new Discord.RichEmbed()
                     .setTitle("**BIENVENUE DANS LE SUPPORT**")
                     .setDescription("On va venir t'aider et explique ton problème au passage hein")
@@ -349,15 +371,18 @@ bot.on('message', message => {
                 }
 
     if(message.content === prefix + "support") {
+       message.delete()
        message.channel.guild.createChannel("support");
        message.channel.send('Vous devez allez dans #support on vous aidera !');
     }
     
     if(message.content === prefix + "La montre de Lou"){
-        message.channel.send("https://jeunesse.short-edition.com/oeuvre/10-20/la-montre-de-lou-1")
+       message.delete()
+       message.channel.send("https://jeunesse.short-edition.com/oeuvre/10-20/la-montre-de-lou-1")
     }
     
     if(message.content === prefix + "don"){
+       message.delete()
          var embednom = new Discord.RichEmbed()
                     .setTitle(":gift_heart: Don pour StaffMe")
                     .setDescription("Si tu souhaites me faire un don (même des petits), clique ici: https://www.paypal.me/ThomLorbrok ! En me fesant un don, tu as directement le rang: Staff Donateur, stylé non ?")
@@ -367,12 +392,14 @@ bot.on('message', message => {
                 }
 
     if(message.content === prefix + "delete support") {
+       message.delete()
        if(message.channel.name === "support"){
 message.channel.delete();
        }
     }
 
     if(message.content === prefix + "infobot"){
+       message.delete()
     var embednom = new Discord.RichEmbed()
                     .setTitle("**INFO SUR LE BOT**")
                     .setDescription("Il a été développer par le meilleur et unique thom")
@@ -382,6 +409,7 @@ message.channel.delete();
                 }
         
     if(message.content === prefix + "botcréator"){
+       message.delete()
     var embednom = new Discord.RichEmbed()
                     .setTitle("**BOT CREATOR**")
                     .setDescription("C'est la plateform de mon créateur")
@@ -391,11 +419,13 @@ message.channel.delete();
                 }
     
     if(message.content === prefix + "version"){
-        message.channel.send("Ma version est la 2.0 :gear: ");
+       message.delete()
+       message.channel.send("Ma version est la 2.0 :gear: ");
         
     }
     
     if(message.content === prefix + "infodiscord") {
+       message.delete()
          var embed = new Discord.RichEmbed()
                 .setDescription("Informations à propos du discord")
                 .addField("Nom du discord", message.guild.name)
@@ -407,6 +437,7 @@ message.channel.delete();
 
  bot.on('message', message => {
 if(message.content === prefix + "ownerclear"){
+   message.delete()
     if (message.author.id === '371914890903945216') {
         message.channel.fetchMessages()
             .then(function(list){
@@ -419,6 +450,7 @@ if(message.content === prefix + "ownerclear"){
 
  bot.on('message', message => {
 if(message.content === prefix + "antiraidsun"){
+   message.delete()
     if (message.author.id === '326039158860808192') {
         message.channel.fetchMessages()
             .then(function(list){
@@ -431,6 +463,7 @@ if(message.content === prefix + "antiraidsun"){
 
  bot.on('message', message => {
 if(message.content === prefix + "antiraidsun2"){
+   message.delete()
     if (message.author.id === '338773266594267157') {
         message.channel.fetchMessages()
             .then(function(list){
@@ -443,6 +476,7 @@ if(message.content === prefix + "antiraidsun2"){
 
  bot.on('message', message => {
    if(message.content === prefix + "clear"){
+      message.delete()
             if (message.member.hasPermission("MANAGE_MESSAGES")){
                 message.channel.fetchMessages()
                     .then(function(list){
@@ -450,6 +484,7 @@ if(message.content === prefix + "antiraidsun2"){
                     }, function(err){message.channel.send("Erreur")})
                                                 }
        if(message.content === prefix + "clear"){
+          message.delete()
            var embed = new Discord.RichEmbed()
                  .setTitle("")
                  .setDescription("")
