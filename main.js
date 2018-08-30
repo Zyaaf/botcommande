@@ -24,4 +24,12 @@ clientDiscord.on("message", message => {
     clientDiscord.channels.get("484802599808401468").send("Contact");
   }
      
+  else if(splitMessage === PREFIX + "ban") {
+    if(splitMessage.length === 2) {
+      message.guild.ban(message.mentions.users.first());
+    }
+    else
+         message.reply("Mentionne quelqu'un !")
+  }
+  
 });
