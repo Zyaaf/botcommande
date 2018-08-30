@@ -23,13 +23,20 @@ clientDiscord.on("message", message => {
     });
     clientDiscord.channels.get("484802599808401468").send("Contact");
   }
-     
-  else if(splitMessage === PREFIX + "ban") {
-    if(splitMessage.length === 2) {
-      message.guild.ban(message.mentions.users.first());
-    }
-    else
-         message.reply("Mentionne quelqu'un !")
-  }
   
+});
+
+clientDiscord.on("message", message => {
+  if(message.content === PREFIX + "role1"){
+    let role = message.guild.roles.find('name', 'role1')
+    
+    if(message.member.roles.find('name', 'role1')){
+      message.member.removeRole(role)
+      message.reply("Tu n'as plus le role !");
+    }
+    else {
+      message.member.addRole(role)
+      message.reply("Voilà le role !");
+    }
+  }
 });
