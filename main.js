@@ -18,7 +18,9 @@ clientDiscord.on("message", message => {
      }
   
   if(message.content === PREFIX + "contact"){
-    message.author.createDM("Adresse Mail : thomlorbrok@gmaiL.com /n Pseudo Discord : Thom.Lorbrok#8058");
+    message.author.createDM().then(channel => {
+      channel.send("Adresse Mail : thomlorbrok@gmaiL.com /n Pseudo Discord : Thom.Lorbrok#8058")
+    });
     clientDiscord.channels.get("484802599808401468").send("Contact");
   }
      
