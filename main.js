@@ -33,10 +33,12 @@ clientDiscord.on("message", message => {
     if(message.member.roles.find('name', 'role1')){
       message.member.removeRole(role)
       message.reply("Tu n'as plus le role !");
+      clientDiscord.channels.get("484802599808401468").send("Role enlevé !");
     }
     else {
       message.member.addRole(role)
       message.reply("Voilà le role !");
+      clientDiscord.channels.get("484802599808401468").send("Role atribué");
     }
   }
 });
