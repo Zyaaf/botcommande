@@ -54,7 +54,7 @@ bot.on('message', message => {
 bot.on('message', message => {
        
     if (message.content.startsWith(prefix + "vraioufaux")) {
-   if(message.author.id === "371914890903945216"){
+    if(!message.member.hasPermission(`ADMINISTRATOR`)) return message.channel.send(`Vous n'avez pas la permission d'executer cette commande !`){
        message.delete()
        let args = message.content.split(" ").slice(1);
        let thingToEcho = args.join(" ")
@@ -79,7 +79,7 @@ bot.on('message', message => {
 bot.on('message', message => {
        
     if (message.content.startsWith(prefix + "sondage")) {
-   if(message.author.id === "371914890903945216"){
+    if(!message.member.hasPermission(`ADMINISTRATOR`)) return message.channel.send(`Vous n'avez pas la permission d'executer cette commande !`){
        message.delete()
        let args = message.content.split(" ").slice(1);
        let thingToEcho = args.join(" ")
@@ -142,8 +142,8 @@ bot.on('message', message => {
          .addField("-don", "Un petit don paypal ne fait pas de mal :p ")
          .addField("-histoires", "Savoir les histoires disponible")
          .addField("-say [Text]", "Le bot répète le text")
-         .addField("-sondage [TEXT] (réservé au créateur)", "Permet de faire des sondages")
-         .addField("vraioufaux [TEXT] (réservé au créateur)", "Permet de faire des vrai ou faux")
+         .addField("-sondage [TEXT] ", "Permet de faire des sondages")
+         .addField("vraioufaux [TEXT] ", "Permet de faire des vrai ou faux")
          .addField("-systsondage", "Permet de faire le système des sondage")
          .addField("-systvraioufaux", "Permet de faire le système des vraioufaux")
          .addField("-ownerclear", "Réservé au créateur")
