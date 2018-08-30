@@ -54,7 +54,7 @@ bot.on('message', message => {
 bot.on('message', message => {
        
     if (message.content.startsWith(prefix + "vraioufaux")) {
-    if(!message.member.hasPermission(ADMINISTRATOR)) return message.channel.send(Vous n'avez pas la permission d'executer cette commande !){
+    if(!message.member.hasPermission(ADMINISTRATOR)) return message.channel.send("Vous n'avez pas la permission d'executer cette commande !"){
        message.delete()
        let args = message.content.split(" ").slice(1);
        let thingToEcho = args.join(" ")
