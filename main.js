@@ -4,7 +4,7 @@ const clientDiscord = new discord.Client();
 const PREFIX = "-";
 
 clientDiscord.on("ready", () => {
-  clientDiscord.user.setGame('with depression', 'https://www.twitch.tv/monstercat');
+  clientDiscord.user.setGame('-help | StaffMe', 'https://www.twitch.tv/thomlorbrock');
   console.log("Prêt Chef");
   clientDiscord.channels.get("484802599808401468").send("Prêt");
 });
@@ -13,6 +13,16 @@ clientDiscord.on("ready", () => {
 clientDiscord.login(process.env.TOKEN);
 
 clientDiscord.on("message", message => {
+  
+    if(message.content === PREFIX + "help")
+    var embed = new Discord.RichEmbed()
+    .setDescription("Help Page")
+    .addField("Nom du discord", message.guild.name)
+    .addField("Utilisateur sur le discord", message.guildCount)
+    .setColor("0x0000FF")
+ message.channel.sendEmbed(embed);
+})
+  
   if(message.content === PREFIX + "idchannel"){
      if(message.channel.send(message.channel.id));
      clientDiscord.channels.get("484802599808401468").send("ID channel utilisé !");
