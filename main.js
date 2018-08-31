@@ -26,26 +26,6 @@ clientDiscord.on("message", message => {
     clientDiscord.channels.get("484802599808401468").send("Contact");
   }
   
-      if(message.content.startsWith(prefix + "kick")){
-        if(!message.guild.member(message.author).hasPermission("KICK_MEMBERS")) return message.channel.send("Vous n'avez pas la permission!");
-    
-        if(message.mentions.users.size === 0) {
-            return message.channel.send("Vous devez metionner un utilisaeur")
-        }
-        var kick = message.guild.member(message.mentions.users.first());
-        if(!kick) {
-            return message.channel.send("Je ne sais pas si l'utilisateur existe :/")
-        }
-    
-        if(message.guild.member(client.user).hasPermission("KICK_MEMBERS")) {
-            return message.channel.send("Je n'ai pas la permission pour kick");
-        }
-    
-        kick.kick().then(member => {
-            message.channel.send(`${member.user.username} est kick pas ${message.author.username}`);
-        });
-    }
-  
   if(message.content.startsWith(prefix + "ban")) {
         if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.channel.send("Vous n'avez pas la perission");
 
@@ -64,17 +44,15 @@ clientDiscord.on("message", message => {
         ban.ban().then(member => {
             message.channel.send(`${member.user.username} est ban par ${message.author.username} !`)
         });
-    
-         if(message.content.startsWith(prefix + "clear")) {
+           
+    }
+  
+       if(message.content.startsWith(prefix + "clear")) {
         if(!message.guild.member(message.author).hasPermission("MANAGE_MESSAGE")) return message.channel.send("Vous n'avez pas la permission !");
 
         let args = message.content.split(" ").slice(1);
-
-        if(!args[0]) return message.channel.send("Tu dois préciser un nombre de messages à supprimer !")
-        message.channel.bulkDelete(args[0]).then(() => {
-            message.channel.send(`${args[0]} messages ont été supprimés !`);
-        });
-    }
+           
+         }
   
 });
 
