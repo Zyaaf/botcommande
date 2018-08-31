@@ -14,6 +14,14 @@ clientDiscord.login(process.env.TOKEN);
 
 clientDiscord.on("message", message => {
   
+   let args = message.content.slice(PREFIX.length).trim().split(' ');
+  
+   if(message.content === PREFIX + "say"){
+     let say = args.join(' ');
+     message.delete();
+     message.channel.send(say);
+   }
+  
    if(message.content === PREFIX + "help"){
    var embed = new Discord.RichEmbed()
     .setDescription("Help Page")
