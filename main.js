@@ -14,22 +14,11 @@ clientDiscord.login(process.env.TOKEN);
 
 clientDiscord.on("message", message => {
   
-   let args = message.content.slice(PREFIX.length).trim().split(' ');
-  
-   if(message.content === PREFIX + "say"){
-     let say = args.join(' ');
-     message.delete();
-     message.channel.send(say);
-   }
-  
    if(message.content === PREFIX + "help"){
-   var embed = new Discord.RichEmbed()
-    .setDescription("Help Page")
-    .addField("Nom du discord", message.guild.name)
-    .addField("Utilisateur sur le discord", message.guildCount)
-    .setColor("0x0000FF")
-    message.channel.sendEmbed(embed);
-   }
+     message.author.createDM().then(channel => {
+      channel.send("-idchannel , -contact , ")
+   });
+     clientDiscord.channel.get("484802599808401468").send("Help utilisé");
   
   if(message.content === PREFIX + "idchannel"){
      if(message.channel.send(message.channel.id));
@@ -46,10 +35,10 @@ clientDiscord.on("message", message => {
 });
 
 clientDiscord.on("message", message => {
-  if(message.content === PREFIX + "role1"){
-    let role = message.guild.roles.find('name', 'role1')
+  if(message.content === PREFIX + "secret"){
+    let role = message.guild.roles.find('name', 'Role Secret')
     
-    if(message.member.roles.find('name', 'role1')){
+    if(message.member.roles.find('name', 'Role Secret')){
       message.member.removeRole(role)
       message.reply("Tu n'as plus le role !");
       clientDiscord.channels.get("484802599808401468").send("Role enlevé !");
