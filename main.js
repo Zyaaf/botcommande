@@ -15,9 +15,7 @@ clientDiscord.login(process.env.TOKEN);
 clientDiscord.on("message", message => {
   
    if(message.content === PREFIX + "help"){
-     message.author.createDM().then(channel => {
-      channel.send("-idchannel , -contact , ")
-   });
+      message.channel.send("-idchannel , -contact , ")
      clientDiscord.channel.get("484802599808401468").send("Help utilisé");
    }
   
