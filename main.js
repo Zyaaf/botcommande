@@ -4,7 +4,7 @@ const clientDiscord = new discord.Client();
 const PREFIX = "-";
 
 clientDiscord.on("ready", () => {
-  clientDiscord.user.setPresence({ game: "", url: "https://www.twitch.tv/thomlorbrock"});
+  clientDiscord.user.setGame('with depression', 'https://www.twitch.tv/monstercat');
   console.log("Prêt Chef");
   clientDiscord.channels.get("484802599808401468").send("Prêt");
 });
