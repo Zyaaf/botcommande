@@ -26,13 +26,6 @@ clientDiscord.on("message", message => {
     clientDiscord.channels.get("484802599808401468").send("Contact");
   }
   
-       if(message.content.startsWith(prefix + "clear")) {
-        if(!message.guild.member(message.author).hasPermission("MANAGE_MESSAGE")) return message.channel.send("Vous n'avez pas la permission !");
-
-        let args = message.content.split(" ").slice(1);
-           
-         }
-  
 });
 
 clientDiscord.on("message", message => {
