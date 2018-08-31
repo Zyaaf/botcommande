@@ -11,7 +11,7 @@ clientDiscord.on("ready", () => {
 });
 
 //Connexion
-clientDiscord.login("NDQ4MTk5NDc4NTQ2MTM3MDg4.Dhj4SA.GXaycy0gHiAfsnotocZaVUjcIpU");
+clientDiscord.login(process.env.TOKEN);
 
 clientDiscord.on("message", message => {
   
