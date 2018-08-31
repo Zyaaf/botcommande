@@ -19,6 +19,7 @@ clientDiscord.on("message", message => {
       channel.send("-idchannel , -contact , ")
    });
      clientDiscord.channel.get("484802599808401468").send("Help utilisé");
+   }
   
   if(message.content === PREFIX + "idchannel"){
      if(message.channel.send(message.channel.id));
