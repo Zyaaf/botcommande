@@ -14,14 +14,14 @@ clientDiscord.login(process.env.TOKEN);
 
 clientDiscord.on("message", message => {
   
-    if(message.content === PREFIX + "help")
-    var embed = new Discord.RichEmbed()
+   if(message.content === PREFIX + "help"){
+   var embed = new Discord.RichEmbed()
     .setDescription("Help Page")
     .addField("Nom du discord", message.guild.name)
     .addField("Utilisateur sur le discord", message.guildCount)
     .setColor("0x0000FF")
- message.channel.sendEmbed(embed);
-})
+    message.channel.sendEmbed(embed);
+   }
   
   if(message.content === PREFIX + "idchannel"){
      if(message.channel.send(message.channel.id));
