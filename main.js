@@ -26,27 +26,6 @@ clientDiscord.on("message", message => {
     clientDiscord.channels.get("484802599808401468").send("Contact");
   }
   
-  if(message.content.startsWith(prefix + "ban")) {
-        if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.channel.send("Vous n'avez pas la perission");
-
-        if(message.mentions.users.size === 0) {
-            return message.channel.send("Vous devez mentionner un utilisateur");
-        }
-
-        var ban = message.guild.member(message.mentions.users.first());
-        if(!ban) {
-            return message.channel.send("Je ne sais pas si l'utilisateur existe");
-        }
-
-        if(!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) {
-            return message.channel.send("Je n'ai pas la permission pour ban");
-        }
-        ban.ban().then(member => {
-            message.channel.send(`${member.user.username} est ban par ${message.author.username} !`)
-        });
-           
-    }
-  
        if(message.content.startsWith(prefix + "clear")) {
         if(!message.guild.member(message.author).hasPermission("MANAGE_MESSAGE")) return message.channel.send("Vous n'avez pas la permission !");
 
