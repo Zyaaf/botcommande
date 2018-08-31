@@ -27,6 +27,8 @@ clientDiscord.on("message", message => {
     clientDiscord.channels.get("484802599808401468").send("Contact");
   }
 
+});
+ 
 clientDiscord.on("message", message => {
   if(message.content === PREFIX + "secret"){
     let role = message.guild.roles.find('name', 'Role Secret')
