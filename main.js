@@ -19,18 +19,11 @@ clientDiscord.on("message", message => {
      if(message.channel.send(message.channel.id));
      clientDiscord.channels.get("484802599808401468").send("ID channel utilisé !");
      }
-  
-  if(message.content === PREFIX + "contact"){
-    message.author.createDM().then(channel => {
-      channel.send("Adresse Mail : thomlorbrok@gmaiL.com /n Pseudo Discord : Thom.Lorbrok#8058")
-    });
-    clientDiscord.channels.get("484802599808401468").send("Contact");
-  }
 
 });
 
 clientDiscord.on("message", message => {
-     if (prefix + "ban") { 
+  if(message.content === PREFIX + "ban") { 
    if (!message.member.roles.some(r=>["bot-admin"].includes(r.name)) ) return message.reply("Désolé, tu n'a pas la permission !");
    var banmember = message.mentions.members.first(); 
    if (!banmember) return message.reply("Veuillez mentionner une personne valide.") 
