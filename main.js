@@ -14,7 +14,7 @@ clientDiscord.on("ready", () => {
 clientDiscord.login(process.env.TOKEN);
 
 clientDiscord.on('messageReactionAdd', (reaction, user) => {
-  if(reaction.emoji.name === ":dragon_face:"){
+  if(reaction.emoji.name === ":dragon_face:")
       let role = message.guild.roles.find('name', 'Role Secret')
     
     if(message.member.roles.find('name', 'Role Secret')){
