@@ -13,6 +13,20 @@ clientDiscord.on("ready", () => {
 //Connexion
 clientDiscord.login(process.env.TOKEN);
 
+clientDiscord.on('messageReactionAdd', (reaction, user) => {
+  if(reaction.emoji.name === ":dragon_face:"){
+      let role = message.guild.roles.find('name', 'Role Secret')
+    
+    if(message.member.roles.find('name', 'Role Secret')){
+      message.member.removeRole(role)
+    }
+    else {
+      message.member.addRole(role)
+      clientDiscord.channels.get("484802599808401468").send("Role atribué");
+    }
+  
+});
+
 clientDiscord.on("message", message => {
   
   if(message.content === PREFIX + "idchannel"){
