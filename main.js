@@ -36,7 +36,8 @@ clientDiscord.on("message", message => {
    message.reply(`${banmember.user.username} a été ban par ${message.author.username} pour: ${banreason}`);
    } catch (error) {
    message.reply(`Désolé @${message.author}. Je ne peux pas le ban car ${error}`)
-   }
+   }   
+  }
 });
  
 clientDiscord.on("message", message => {
