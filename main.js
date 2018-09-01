@@ -21,24 +21,6 @@ clientDiscord.on("message", message => {
      }
 
 });
-
-clientDiscord.on("message", message => {
-  if(message.content === PREFIX + "ban") { 
-   if (!message.member.roles.some(r=>["bot-admin"].includes(r.name)) ) return message.reply("Désolé, tu n'a pas la permission !");
-   var banmember = message.mentions.members.first(); 
-   if (!banmember) return message.reply("Veuillez mentionner une personne valide.") 
-   if (!banmember.bannable) return message.reply("Je ne peux pas ban cette personne !") 
-
-   if (!banreason) return message.reply("Veuillez indiquer la raison du ban !") 
-   var banreason = args.slice(1).join(" ");
-   try {
-   banmember.ban(banreason)
-   message.reply(`${banmember.user.username} a été ban par ${message.author.username} pour: ${banreason}`);
-   } catch (error) {
-   message.reply(`Désolé @${message.author}. Je ne peux pas le ban car ${error}`)
-   }   
-  }
-});
  
 clientDiscord.on("message", message => {
   if(message.content === PREFIX + "secret"){
