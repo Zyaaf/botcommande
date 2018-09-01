@@ -20,6 +20,21 @@ clientDiscord.on("message", message => {
      clientDiscord.channels.get("484802599808401468").send("ID channel utilisé !");
      }
   
+   if (prefix + "ban") { 
+   if (!message.member.roles.some(r=>["bot-admin"].includes(r.name)) ) return message.reply("Désolé, tu n'a pas la permission !");
+   var banmember = message.mentions.members.first(); 
+   if (!banmember) return message.reply("Veuillez mentionner une personne valide.") 
+   if (!banmember.bannable) return message.reply("Je ne peux pas ban cette personne !") 
+
+   if (!banreason) return message.reply("Veuillez indiquer la raison du ban !") 
+   var banreason = args.slice(1).join(" ");
+   try {
+   banmember.ban(banreason)
+   message.reply(`${banmember.user.username} a été ban par ${message.author.username} pour: ${banreason}`);
+   } catch (error) {
+   message.reply(`Désolé @${message.author}. Je ne peux pas le ban car ${error}`)
+   }
+  
   if(message.content === PREFIX + "contact"){
     message.author.createDM().then(channel => {
       channel.send("Adresse Mail : thomlorbrok@gmaiL.com /n Pseudo Discord : Thom.Lorbrok#8058")
