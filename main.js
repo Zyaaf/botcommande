@@ -5,7 +5,7 @@ const PREFIX = "-";
 
 
 clientDiscord.on("ready", () => {
-  clientDiscord.user.setGame('-help | StaffMe', 'https://www.twitch.tv/thomlorbrock');
+  clientDiscord.user.setGame('numbserv + ' SERVS ' + serv + ' USER', 'https://www.twitch.tv/thomlorbrock');
   console.log("Prêt Chef");
   clientDiscord.channels.get("484802599808401468").send("Prêt");
 });
