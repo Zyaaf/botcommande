@@ -76,7 +76,7 @@ clientDiscord.on("message", message => {
   
   var msg = message.content.toUpperCase();
   
-  if(msg.includes("LETTUCE")) {
+  if(message.content == "LETTUCE"){
     message.delete();
     message.author.send("Hop la une puce en moins")
   }
