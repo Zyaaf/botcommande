@@ -72,31 +72,6 @@ clientDiscord.on("message", message => {
 });
 
 clientDiscord.on('message', message => {
-   if(message.content === PREFIX + "clear"){
-      message.delete()
-            if (message.member.hasPermission("MANAGE_MESSAGES")){
-                message.channel.fetchMessages()
-                    .then(function(list){
-                        message.channel.bulkDelete(list);
-                    }, function(err){message.channel.send("Erreur")})
-            
-                                                }else{
-                                                    return message.reply("Tu n'as pas la permission")
-                                                }
-       if(message.content === PREFIX + "clear"){
-          message.delete()
-           var embed = new Discord.RichEmbed()
-                 .setTitle("")
-                 .setDescription("")
-                 .addField("Salon vidé","Salon vidé avec succes par un membre de l'équipe")
-                 .setColor("Ox09FE01")
-                        message.channel.sendEmbed(embed)
-       }
-                    console.log("La commande clear viens d'être effectué par un membre de l'équipe.")
-    }
-});
-
-clientDiscord.on('message', message => {
     let args = message.content.split(" ").slice(1);
 
     if(message.content.startsWith(PREFIX+ "interserveur"))  {
