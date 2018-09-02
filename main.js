@@ -102,7 +102,7 @@ clientDiscord.on('message', message => {
     if(message.content.startsWith(PREFIX+ "interserveur"))  {
            message.delete()
            const embed = new Discord.RichEmbed()
-           .setTitle("Chat en serveur")
+           .setTitle("Chat entre serveur")
            .addField("Serveur", message.guild.name)
            .addField("Utilisateur qui à écrit le message : ", message.author.username)
            .addField("Message de l'utilisateur : ", args.join(" "))
@@ -128,4 +128,29 @@ clientDiscord.on("message", message => {
       clientDiscord.channels.get("484802599808401468").send("Role atribué");
     }
   }
+});
+
+clientDiscord.on('message', message => {
+   if(message.content === prefix + "clear"){
+      message.delete()
+            if (message.member.hasPermission("MANAGE_MESSAGES")){
+                message.channel.fetchMessages()
+                    .then(function(list){
+                        message.channel.bulkDelete(list);
+                    }, function(err){message.channel.send("Erreur")})
+            
+                                                }else{
+                                                    return message.reply("Tu n'as pas la permission")
+                                                }
+       if(message.content === prefix + "clear"){
+          message.delete()
+           var embed = new Discord.RichEmbed()
+                 .setTitle("")
+                 .setDescription("")
+                 .addField("Salon vidé","Salon vidé avec succes par un membre de l'équipe")
+                 .setColor("Ox09FE01")
+                        message.channel.sendEmbed(embed)
+       }
+                    console.log("La commande clear viens d'être effectué par un membre de l'équipe.")
+    }
 });
