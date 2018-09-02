@@ -1,19 +1,19 @@
 const discord = require("discord.js");
 
-const clientDiscord = new discord.Client();
+const bot = new discord.Client();
 const PREFIX = "-";
 
 
-clientDiscord.on("ready", () => {
-  clientDiscord.user.setGame(' -help | StaffMe ' + clientDiscord.guilds.size + ' serveurs ' + clientDiscord.users.size + ' users ', "https://www.twitch.tv/thomlorbrock");
+bot.on("ready", () => {
+  bot.user.setGame(' -help | StaffMe ' + bot.guilds.size + ' serveurs ' + bot.users.size + ' users ', "https://www.twitch.tv/thomlorbrock");
   console.log("Prêt Chef");
-  clientDiscord.channels.get("484802599808401468").send("Prêt");
+  bot.channels.get("484802599808401468").send("Prêt");
 });
 
 //Connexion
-clientDiscord.login(process.env.TOKEN);
+bot.login(process.env.TOKEN);
 
-clientDiscord.on('message', message => {
+bot.on('message', message => {
        
     if (message.content.startsWith(PREFIX + "sondage")) {
    if (message.member.hasPermission("ADMINISTRATOR")){
@@ -37,7 +37,7 @@ clientDiscord.on('message', message => {
 
         }
 });
-clientDiscord.on("message", message => {
+bot.on("message", message => {
   
       if(message.content === PREFIX + "help"){
        message.delete()
@@ -54,7 +54,7 @@ clientDiscord.on("message", message => {
   
   if(message.content === PREFIX + "idchannel"){
      if(message.channel.send(message.channel.id));
-     clientDiscord.channels.get("484802599808401468").send("ID channel utilisé !");
+     bot.channels.get("484802599808401468").send("ID channel utilisé !");
      }
   
   
@@ -71,7 +71,7 @@ clientDiscord.on("message", message => {
 
 });
 
-clientDiscord.on('message', message => {
+bot.on('message', message => {
    if(message.content === PREFIX + "clear"){
       message.delete()
             if (message.member.hasPermission("MANAGE_MESSAGES")){
@@ -96,7 +96,7 @@ clientDiscord.on('message', message => {
     }
 });
 
-clientDiscord.on('message', message => {
+bot.on('message', message => {
     let args = message.content.split(" ").slice(1);
 
     if(message.content.startsWith(PREFIX+ "interserveur"))  {
@@ -107,25 +107,25 @@ clientDiscord.on('message', message => {
            .addField("Utilisateur qui à écrit le message : ", message.author.name)
            .addField("Message de l'utilisateur : ", args.join(" "))
            .setColor(0xFB0000)
-           clientDiscord.channels.get("485827848473673738").send(embed);
+           bot.channels.get("485827848473673738").send(embed);
 
        }
 
 });
  
-clientDiscord.on("message", message => {
+bot.on("message", message => {
   if(message.content === PREFIX + "secret"){
     let role = message.guild.roles.find('name', 'Role Secret')
     
     if(message.member.roles.find('name', 'Role Secret')){
       message.member.removeRole(role)
       message.reply("Tu n'as plus le role !");
-      clientDiscord.channels.get("484802599808401468").send("Role enlevé !");
+      bot.channels.get("484802599808401468").send("Role enlevé !");
     }
     else {
       message.member.addRole(role)
       message.reply("Voilà le role !");
-      clientDiscord.channels.get("484802599808401468").send("Role atribué");
+      bot.channels.get("484802599808401468").send("Role atribué");
     }
   }
 });
