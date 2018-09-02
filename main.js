@@ -74,21 +74,10 @@ clientDiscord.on("message", message => {
                 message.channel.sendEmbed(embednom)
                 }
   
-  var msg = message.content.toUpperCase();
-  
-  if(message.content == "LETTUCE"){
-    message.delete();
-    message.author.send("Hop la une puce en moins")
-  }
-  
   if(message.content === PREFIX + "idchannel"){
      if(message.channel.send(message.channel.id));
      clientDiscord.channels.get("484802599808401468").send("ID channel utilisé !");
      }
-  
-  if(message.author === '448199478546137088'){
-    return;
-  }
 
       if(message.content === PREFIX + "infodiscord") {
        message.delete()
