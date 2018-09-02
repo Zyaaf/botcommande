@@ -13,7 +13,7 @@ clientDiscord.on("ready", () => {
 //Connexion
 clientDiscord.login(process.env.TOKEN);
 
-bot.on('message', message => {
+clientDiscord.on('message', message => {
        
     if (message.content.startsWith(PREFIX + "sondage")) {
    if (message.member.hasPermission("ADMINISTRATOR")){
