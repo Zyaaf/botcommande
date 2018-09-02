@@ -104,7 +104,7 @@ clientDiscord.on('message', message => {
            const embed = new Discord.RichEmbed()
            .setTitle("Chat en serveur")
            .addField("Serveur", message.guild.name)
-           .addField("Utilisateur qui à écrit le message : ", message.author.name)
+           .addField("Utilisateur qui à écrit le message : ", message.author.username)
            .addField("Message de l'utilisateur : ", args.join(" "))
            .setColor(0xFB0000)
            clientDiscord.channels.get("485827848473673738").send(embed);
