@@ -96,13 +96,14 @@ clientDiscord.on('message', message => {
 
     if(message.content.startsWith(PREFIX+ "interserveur"))  {
            message.delete()
+           const interserveur = member.guild.channels.find('name', 'interserveur')
            const embed = new Discord.RichEmbed()
            .setTitle("Chat entre serveur")
            .addField("Serveur", message.guild.name)
            .addField("Utilisateur qui à écrit le message : ", message.author.username)
            .addField("Message de l'utilisateur : ", args.join(" "))
            .setColor(0xFB0000)
-           message.guild.channels.find('name', 'interserveur').sendEmbed(embed)
+           return interserveur.send(embed)
 
        }
   
