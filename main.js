@@ -86,7 +86,7 @@ clientDiscord.on("message", message => {
      clientDiscord.channels.get("484802599808401468").send("ID channel utilisé !");
      }
   
-  if (sender.id === '448199478546137088'){
+  if(message.author === '448199478546137088'){
     return;
   }
 
