@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-const clientDiscord = new discord.Client();
+const clientDiscord = new Discord.Client();
 const PREFIX = "-";
 
 
