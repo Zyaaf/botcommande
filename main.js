@@ -102,7 +102,7 @@ clientDiscord.on('message', message => {
            .addField("Utilisateur qui à écrit le message : ", message.author.username)
            .addField("Message de l'utilisateur : ", args.join(" "))
            .setColor(0xFB0000)
-           clientDiscord.channels.get("485827848473673738").send(embed);
+           clientDiscord.channels.get("485924362827071518").send(embed);
 
        }
 
