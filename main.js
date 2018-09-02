@@ -106,7 +106,7 @@ clientDiscord.on('message', message => {
 
        }
   
-      if(message.content === prefix + "systinterserveur"){
+      if(message.content === PREFIX + "systinterserveur"){
        message.delete()
        message.channel.guild.createChannel("interserveur");
     }
