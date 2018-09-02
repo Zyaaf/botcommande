@@ -102,9 +102,14 @@ clientDiscord.on('message', message => {
            .addField("Utilisateur qui à écrit le message : ", message.author.username)
            .addField("Message de l'utilisateur : ", args.join(" "))
            .setColor(0xFB0000)
-           clientDiscord.channels.get("485924362827071518").send(embed);
+           message.guild.channels.find('name', 'interserveur').sendEmbed(embed)
 
        }
+  
+      if(message.content === prefix + "systinterserveur"){
+       message.delete()
+       message.channel.guild.createChannel("interserveur");
+    }
 
 });
  
