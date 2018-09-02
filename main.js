@@ -131,7 +131,7 @@ clientDiscord.on("message", message => {
 });
 
 clientDiscord.on('message', message => {
-   if(message.content === prefix + "clear"){
+   if(message.content === PREFIX + "clear"){
       message.delete()
             if (message.member.hasPermission("MANAGE_MESSAGES")){
                 message.channel.fetchMessages()
@@ -142,7 +142,7 @@ clientDiscord.on('message', message => {
                                                 }else{
                                                     return message.reply("Tu n'as pas la permission")
                                                 }
-       if(message.content === prefix + "clear"){
+       if(message.content === PREFIX + "clear"){
           message.delete()
            var embed = new Discord.RichEmbed()
                  .setTitle("")
