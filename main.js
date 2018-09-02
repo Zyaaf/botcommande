@@ -13,6 +13,28 @@ clientDiscord.on("ready", () => {
 //Connexion
 clientDiscord.login(process.env.TOKEN);
 
+clientDiscord.on('guildMemberAdd', member => {
+  const welcomechannel = member.guild.channels.find('name', 'bienvenue')
+  
+  var embed = new Discord.RichEmbed()
+  .setColor('#76D880')
+  .setTimestamp()
+  .addField(`:arrow_right: **${member.user.username}**`,':inbox_tray: Bienvenue a toi !! ')
+  return welcomechannel.send({embed})
+
+});
+
+clientDiscord.on('guildMemberRemove', member => {
+  const welcomechannel = member.guild.channels.find('name', 'aurevoir')
+  
+  var embed = new Discord.RichEmbed()
+  .setColor('#DE5454')
+  .setTimestamp()
+  .addField(`:outbox_tray: **${member.user.username}**`, "A quitté le serveur !!")
+  return welcomechannel.send(embed)
+  
+});
+
 clientDiscord.on('message', message => {
        
     if (message.content.startsWith(PREFIX + "sondage")) {
