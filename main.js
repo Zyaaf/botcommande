@@ -32,7 +32,6 @@ clientDiscord.on('guildMemberRemove', member => {
   .setTimestamp()
   .addField(`:outbox_tray: **${member.user.username}**`, "A quitté le serveur !!")
   return welcomechannel.send(embed)
-  
 });
 
 clientDiscord.on('message', message => {
